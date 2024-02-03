@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+.slider-container {
+  width: 100%;
+  /* margin: 0 auto; */
+  position: relative;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.slider-arrow-left {
+  left: 0;
+}
+
+.slider-arrow-right {
+  right: 0;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  justify-content:space-evenly;
+  
+}
+
+.slider img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+ 
+  scroll-snap-align: center;
+}
+
+.slider::-webkit-scrollbar {
+
+}
+
+.slider::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.slider-prev,
+.slider-next {
+  /* margin: 0 10px; */
+  border: none;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+  color: #000;
+}
+
+
+
+</style>
+
+<body>
+  <div class="slider-container">
+    <button class="slider-arrow slider-arrow-left">&#8249;</button>
+    <div class="slider">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230311020943673340_1440x300jpg" alt="Food Item">
+    </div>
+    <button class="slider-arrow slider-arrow-right">&#8250;</button>
+  </div>
+  
+  
+      
+     
+ 
+<script>
+const slider = document.querySelector('.slider');
+const prevButton = document.querySelector('.slider-arrow-left');
+const nextButton = document.querySelector('.slider-arrow-right');
+
+let scrollPos = 0;
+const slideWidth = slider.scrollWidth / slider.children.length;
+
+prevButton.addEventListener('click', () => {
+  scrollPos -= slideWidth;
+  if (scrollPos < 0) {
+    scrollPos = 0;
+  }
+  slider.scrollTo({
+    left: scrollPos,
+    behavior: 'smooth'
+  });
+});
+
+nextButton.addEventListener('click', () => {
+  scrollPos += slideWidth;
+  if (scrollPos > slider.scrollWidth - slider.clientWidth) {
+    scrollPos = slider.scrollWidth - slider.clientWidth;
+  }
+  slider.scrollTo({
+    left: scrollPos,
+    behavior: 'smooth'
+  });
+});
+
+
+</script>  
+</body>
+</html>

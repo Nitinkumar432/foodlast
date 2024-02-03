@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Detection Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fcf3ec;
+
+    }
+    
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #fcf3ec; */
+      background-color: #d13065;
+      border-top-right-radius: 50% 30%;
+      border-bottom-right-radius: 50% 30%;
+      padding: 50px;
+    }
+    
+    .left img {
+      width: 200px;
+      margin-bottom: 30px;
+      border-radius: 15px;;
+    }
+    
+    .left p {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      background-color: #fcf3ec;
+
+    }
+    
+    .location-container {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .location-container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .location-container label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .location-container input {
+      font-size: 16px;
+      padding: 10px;
+     border-top: #c2185b;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: 90%;
+    }
+    
+    .location-container button {
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .location-container button:hover {
+      background-color: #c2185b;
+    }
+    
+    .home-btn {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: none;
+    
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    
+    .home-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .location-img {
+    height: 20px;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+    left:1300px;
+    top:54.1%;
+    transform: translateY(-50%);
+    width: 20px;
+   
+  }
+  .m{
+    padding:10px;
+    border-radius:15px;
+    background-color: #e91e63;
+    color: #fff;
+    text-decoration:none;
+  } 
+  .m:hover{
+    background-color: #c2185b;
+
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="photo2.png" alt="Food Logo">
+      <p>Good food is all the sweeter when shared with good friends.</p>
+      <p>Eat well, travel often.</p>
+    </div>
+    <div class="right">
+       <h3>Welcome to my food order site ,here you will get all different side of indian foods like south north ,west ,east.</h3>
+      
+
+      <div class="location-container">
+        <h2>Enter your location</h2><a href="https://www.google.com/maps/@30.513499,76.6612694,16z"><img class="location-img" src="https://static.thenounproject.com/png/1666879-200.png"></a>
+
+        <label for="location-input">Location:</label>
+        <input type="text" id="location-input" placeholder="Enter your location">
+        <a href="http://127.0.0.1:5502/mainpure.html"><button id="submit-btn">Submit</button></a>
+        <br>
+        <br>
+        <a href="#" class="m" id="getLocation">Current Location</a>
+        <div id="locationInfo" style="display: none;">
+          <p id="latitude"></p>
+          <p id="longitude"></p>
+          <button id="confirmLocation">Confirm</button>
+      </div>
+      
+        
+        </div>
+        <hr>
+       
+      
+        </div>
+        
+        
+          </div>
+          
+          
+          <script>
+            const submitBtn = document.getElementById('submit-btn');
+        
+            submitBtn.addEventListener('click', () => {
+              alert('Your location has been detected! ');
+            });
+          </script>
+         <script>
+          document.addEventListener('DOMContentLoaded', function () {
+              var getLocationLink = document.getElementById('getLocation');
+              var locationInfoDiv = document.getElementById('locationInfo');
+              var latitudeElement = document.getElementById('latitude');
+              var longitudeElement = document.getElementById('longitude');
+              var confirmLocationButton = document.getElementById('confirmLocation');
+      
+              getLocationLink.addEventListener('click', function (event) {
+                  event.preventDefault();
+                  getLocation();
+              });
+      
+              confirmLocationButton.addEventListener('click', function () {
+                  alert('Location confirmed!'); // You can replace this with your custom action
+              });
+      
+              function getLocation() {
+                  if (navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(showPosition, showError);
+                  } else {
+                      alert('Geolocation is not supported by this browser.');
+                  }
+              }
+      
+              function showPosition(position) {
+                  var latitude = position.coords.latitude;
+                  var longitude = position.coords.longitude;
+      
+                  latitudeElement.textContent = 'Latitude: ' + latitude;
+                  longitudeElement.textContent = 'Longitude: ' + longitude;
+      
+                  locationInfoDiv.style.display = 'block';
+              }
+      
+              function showError(error) {
+                  switch (error.code) {
+                      case error.PERMISSION_DENIED:
+                          alert('User denied the request for geolocation.');
+                          break;
+                      case error.POSITION_UNAVAILABLE:
+                          alert('Location information is unavailable.');
+                          break;
+                      case error.TIMEOUT:
+                          alert('The request to get user location timed out.');
+                          break;
+                      case error.UNKNOWN_ERROR:
+                          alert('An unknown error occurred.');
+                          break;
+                  }
+              }
+          });
+      </script>
+      
+</body>
+</html>

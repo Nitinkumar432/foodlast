@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+          <a href="http://127.0.0.1:5500/mainpure.html">
+            <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="The NVR Bistro">
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <!-- Navigation menu items -->
+          </ul>
+        </nav>
+        <div class="location-container">
+          <!-- Location information -->
+        </div>
+        <div class="search-container">
+          <!-- Search bar -->
+        </div>
+    </header>
+    <div class="cart-container">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+        </div>
+        <div class="cart-items">
+          <div class="cart-item">
+            <!-- Item 1 details -->
+            <button class="remove-btn" onclick="removeItem(1)">Remove</button>
+          </div>
+          <div class="cart-item">
+            <!-- Item 2 details -->
+            <button class="remove-btn" onclick="removeItem(2)">Remove</button>
+          </div>
+        </div>
+        <div class="cart-footer">
+          <!-- Footer section content -->
+        </div>
+        <a href="http://127.0.0.1:5500/payment.html"><button id="next-button" onclick="nextProcess()">Checkout</button></a>
+    </div>
+
+    <script>
+      function removeItem(itemId) {
+        const cartItem = document.querySelector(`.cart-item:nth-child(${itemId})`);
+        cartItem.remove();
+
+        calculateSubtotal();
+        applyDiscount();
+      }
+
+      function calculateSubtotal() {
+        // Calculate subtotal logic
+      }
+
+      function applyDiscount() {
+        // Apply discount logic
+      }
+
+      // Initialize item totals, subtotal, and discount on page load
+      window.addEventListener('DOMContentLoaded', () => {
+        // Item initialization logic
+
+        calculateSubtotal();
+        applyDiscount();
+      });
+    </script>
+</body>
+</html>

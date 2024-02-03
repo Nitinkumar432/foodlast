@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgba(255, 255, 255, 0.293);
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+
+/* Add padding to containers */
+form {
+   border: 3px solid #c1d38c;
+   border-radius: 10%; 
+}
+.container {
+  
+  padding: 10px;
+  /* margin-left:30%;
+  margin-right:30%; */
+  margin:5%;
+
+  width: 80%;
+  text-align:center;
+}
+
+/* Full-width inpu
+/t fields */
+input[type=text], input[type=password] {
+  width: 30%;
+  padding: 10px;
+  margin: 12px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline:#04AA6D;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 21px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+    text-align: center;
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-bottom:20px;
+  padding-top: 1px;
+}
+</style>
+</head>
+<body>
+
+<form ALIGN="CENTER" action="/action_page.php">
+  <div class="container">
+    <h1 align="center">Register</h1>c:\Users\NITIN\c code\.vscode\CSS\CSS
+    <p align="middle">Please fill in this form to create an account.</p>
+    <hr>
+
+    <label  align="center"  for="email"><b>Email:</b></label>
+    <BR>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    <br>
+    <label for="psw"><b>Password:</b></label>
+    <BR>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+    <br>
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+   <BR>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+    <button   type="submit" class="registerbtn">Register</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="http://127.0.0.1:5502/login%20page%202.html">Sign in</a>.</p>
+  </div>
+</form>
+
+</body>
+</html>

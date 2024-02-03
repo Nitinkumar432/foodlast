@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Order Site</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    .header {
+      background-color: #f44336;
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    .option-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .option {
+      width: 120px;
+      height: 80px;
+      border: 1px solid #ccc;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .option:hover {
+      background-color: #85d671;
+    }
+
+    .option-img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+
+    .option-title {
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .option.selected {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .option.selected:hover {
+      background-color: #45a049;
+    }
+
+    .apply-btn {
+      background-color: #e64a16;
+      color: white;
+      border: none;
+      width:100px;
+      height:60px;
+      padding: 4px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left:3%;
+      margin-top:10px;
+      transition: background-color 0.3s ease;
+      border-radius: 15px;
+    }
+
+    .apply-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="option-container">
+    <div class="option" onclick="selectOption('veg')">
+      <img class="option-img" src="https://tse3.mm.bing.net/th?id=OIP.7hFJrDoA2BdwF7xbhwR4SgHaFq&pid=Api&P=0&h=180" alt="Vegetarian Icon">
+      <div class="option-title">Vegetarian</div>
+    </div>
+    <div class="option" onclick="selectOption('nonveg')">
+      <img class="option-img" src="https://vectorified.com/images/non-veg-icon-19.png" alt="Non-Vegetarian Icon">
+      <div class="option-title">Non-Veg</div>
+    </div>
+    <div class="option selected" onclick="selectOption('none')">
+      <img class="option-img" src="https://cdn.onlinewebfonts.com/svg/img_369921.png" alt="Not Selected Icon">
+      <div class="option-title">Not Selected</div>
+    </div>
+    <button class="apply-btn" onclick="applyFilter()">Apply</button>
+  </div>
+
+  
+
+  <script>
+    // JavaScript code
+    function selectOption(option) {
+      const options = document.querySelectorAll('.option');
+      options.forEach((opt) => {
+        opt.classList.remove('selected');
+      });
+
+      if (option !== 'none') {
+        const selectedOption = document.querySelector(`.option[data-option="${option}"]`);
+        selectedOption.classList.add('selected');
+      }
+    }
+
+    function applyFilter() {
+        const selectedOption = document.querySelector('.option.selected');
+if (selectedOption) {
+const optionTitle = selectedOption.querySelector('.option-title').innerText;
+console.log('Selected Option:', optionTitle);
+}
+}
+</script>
+</body>
+</html>
+     

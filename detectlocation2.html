@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Location Detection Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fcf3ec;
+      border-top-right-radius: 50% 30%;
+      border-bottom-right-radius: 50% 30%;
+      padding: 50px;
+    }
+    
+    .left img {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+    
+    .left p {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+    }
+    
+    .location-container {
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .location-container h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .location-container label {
+      font-size: 16px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    .location-container input {
+      font-size: 16px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    .location-container button {
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .location-container button:hover {
+      background-color: #c2185b;
+    }
+    
+    .home-btn {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 50px;
+    }
+    
+    .home-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .location-header {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+.location-header h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.location-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-color: #e91e63;
+  border-radius: 50% / 30%;
+  z-index: -1;
+  animation: rotate 8s ease-in-out infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.facts-slogans {
+  margin-top: 50px;
+  text-align: center;
+}
+.facts-slogans h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.facts-slogans ul {
+  list-style: none;
+  padding: 0;
+}
+.facts-slogans li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="Food Logo">
+      <p>Good food is all the sweeter when shared with good friends.</p>
+      <p>Eat well, travel often.</p>
+    </div>
+    <div class="right">
+      <a href="#" class="home-btn">Home</a>
+      <div class="location-container">
+        <h2>Enter your location</h2>
+        <label for="location-input">Location:</label>
+        <input type="text" id="location-input" placeholder="Enter your location">
+        <a href="http://127.0.0.1:5502/mainpure.html"><button id="submit-btn">Submit</button></a>
+        
+        </div>
+        </div>
+        
+        
+          </div>
+          <div class="facts-slogans">
+            <h3>Facts and Slogans</h3>
+            <ul>
+              <li>Food is not just fuel, it's information. It talks to your DNA and tells it what to do.</li>
+              <li>Good food, good mood.</li>
+              <li>Eat clean, stay fit, and have a burger to stay sane.</li>
+              <li>Life is uncertain. Eat dessert first.</li>
+            </ul>
+          </div>
+          <script>
+            const submitBtn = document.getElementById('submit-btn');
+        
+            submitBtn.addEventListener('click', () => {
+              alert('Your location has been detected! ');
+            });
+          </script>
+        
+          
+</body>
+</html>

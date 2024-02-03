@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Your custom styles here */
+ /* Your custom styles here */
+ .popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+
+.popup {
+  position: relative;
+  background-color: #ffffff;
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20vh;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input[type="text"],
+button.login-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button.login-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+p.signup-option {
+  margin-top: 0;
+}
+
+.offer {
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Your website content here -->
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <span class="close-icon">&times;</span>
+      <img class="logo" src="logo.png" alt="Logo">
+      <h2>Login with Number</h2>
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Phone Number">
+        <button type="submit" class="login-button">Login</button>
+      </form>
+      <p class="signup-option">Don't have an account? <a href="#">Sign up</a></p>
+      <div class="offer">
+        <h3>Special Offer</h3>
+        <p>Get 20% off on your first purchase!</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+      }, 10000);
+    });
+
+    // Add event listener for closing the pop-up
+    var closeIcon = document.querySelector(".close-icon");
+    closeIcon.addEventListener("click", function() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
+    });
+  </script>
+</body>
+</html>

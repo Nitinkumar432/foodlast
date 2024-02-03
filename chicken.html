@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chicken Planet</title>
+
+</head>
+<style>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-left:10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+}
+
+
+footer {
+  margin-top: 50px;
+  background-color: #1f243a;
+  color: white;
+  padding: 30px;
+  margin-top: 10px;
+  
+
+} 
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.item {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(69, 32, 32, 0.1);
+  text-align: center;  
+}
+
+.item img {
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.item:hover{
+  background-color:aliceblue;
+}
+
+.item h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  border-radius: 15px;
+  
+  width:100%;
+  height:7%;
+  text-align: center;
+}
+
+.item p {
+  margin-top: 5px;
+  font-size: 15px;
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+.button {
+  background-color: #db261d; /* Green */
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor:pointer;
+}
+.button:hover{
+  background-color: #db261d;
+
+  border-color: #f2f2f2;
+  border-style:double;
+}
+.rec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(220, 225, 228);
+    border-radius: 15px;
+    padding: 1.1%;
+    margin-bottom: 30px;
+    margin-top: 12px;
+    margin-right: 8px;
+}
+
+.h1{
+  font-family: Impact;
+  font-size: 250%;
+  color:#ff8c00;
+
+}
+.m1{
+  text-align:center;
+  margin-top:0px;
+  background-color:#ff8c00;
+  font-family: Tahoma;
+
+
+}
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #1f243a;
+  color:white;
+}
+
+.footer-info h3,
+.footer-follow h3,
+.footer-instructions h3 {
+  margin-top: 0;
+}
+
+.footer-follow ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-follow li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-follow a {
+
+  text-decoration: none;
+}
+
+.footer-follow a:hover {
+  text-decoration: underline;
+  color:deepskyblue;
+}
+.h3{
+  /* background-color: #bc751e; */
+}
+.cart{
+  width:30px;
+  margin-right:20px;
+  height:25px;
+}
+
+</style>
+<!-- <h1>Burger king</h1> -->
+<body>
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="Burger King logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5502/mainpure.html">Home</a></li>
+          <li><a href="http://127.0.0.1:5502/menu.html">Our Menu</a></li>
+          <li><a href="http://127.0.0.1:5502/Offer.html">Deals</a></li>
+          <li><a href="#">Order</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="location-container">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <A href="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="The NVR Bistro"></A>
+        
+          <a href="http://127.0.0.1:5502/login%20page%202.html"><img src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+          <!-- <span>Find a Burger King near you</span> -->
+        </div>
+      </div>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+
+       
+        
+</header>
+<body>
+     
+  
+    <h1 class="m1">Chick 'n Flick</h1>
+    <h2 style="font-family:Helvetica">Deals of the Day</h3
+    
+    <main>
+        <section class="menu">
+          <!-- <h2>Menu</h2> -->
+          <div class="item">
+            <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Tandoori-Chicken-750x750.jpg" alt="Tandoori Chicken">
+            <u><h3>Tandoori Chicken,</h3></u> 
+            <span align="center" style="font-size:150%;">Price:200</span>
+            <p >Peace is achieved by a perfect serving of chicken.</p>
+            
+      
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$10.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/506/a49ecd2806bfd1a52ff3d929454d4506.jpg" alt="Afgani Chicken">
+            <h3>Afgani Chicken</h3>
+            <span align="center" style="font-size:150%;">Price:310</span>
+            <p >Never thought lemon chicken tastes sumptuous.</p>
+            
+        
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$12.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://www.thespruceeats.com/thmb/1ASSnPUMf1ZqROSByxvDpWi07Bg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-recipe-1957388-Final-5bb021874cedfd0026da89fd.jpg" alt="Chicken Tikka">
+            <h3>Chicken Tikka</h3>
+            <span align="center" style="font-size:150%;">Price:120</span>
+            <p>It’s war if you take my chicken off my plate.</p>
+      
+            
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+           <div class="item">
+          <img src="https://www.flavorquotient.com/wp-content/uploads/2018/08/Garlic-Herb-Kebabs-FQ-2.jpg" alt="Chicken Garlic Tikka">
+          <h3>Chicken Garlic Tikka</h3>
+          <span align="center" style="font-size:150%;">Price:140</span>
+            <p >Grilled chicken with barbecue sauce is love.</p>
+       
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          <div class="item">
+            <img src="https://img-global.cpcdn.com/recipes/19515d67655439a9/1200x630cq70/photo.jpg" alt="Chicken Achari Tikka">
+            <h3>Chicken Achari Tikka</h3>
+            <span align="center" style="font-size:150%;">Price:150</span>
+            <p >Each time you eat a fried chicken, make a wish.</p>
+            
+           
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://masalaandchai.com/wp-content/uploads/2022/03/Butter-Chicken.jpg" alt="Butter Chicken">
+            <h3>Butter Chicken</h3>
+            <span align="center" style="font-size:150%;">Price:240</span>
+            <p >Keep your hands off my buttered chicken.</p>
+           
+           
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://img-global.cpcdn.com/recipes/19515d67655439a9/1200x630cq70/photo.jpg" alt="Chicken Maxmius">
+            <h3>Chicken Maxmius</h3>
+            <span align="center" style="font-size:150%;">Price:290</span>
+            <p >Then the chicken asked, “What’s for dinner?”</p>
+          
+        
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <!-- <div class="item">
+            <img src="https://freepngimg.com/download/burger%20sandwich/12-hamburger-burger-png-image.png" alt="Burger">
+            <h3>Burger</h3>
+            <p>A juicy burger with all the fixings.</p> -->
+            <!-- <p>$10.99</p> -->
+          <div class="item">
+          <img src="https://spicecravings.com/wp-content/uploads/2021/01/Chicken-Karahi-Featured-1.jpg" alt="Kadai Chicken">
+          <h3>Kadai Chicken</h3>
+          <span align="center" style="font-size:150%;">Price:320</span>
+          <p >Is there such a thing as a cyber chicken?</p>
+        
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          <div class="item">
+            <img src="https://i.ytimg.com/vi/x29BkupEMFk/maxresdefault.jpg" alt="Chicken Moughalai">
+            <h3>Chicken Moughalai</h3>
+            <span align="center" style="font-size:150%;">Price:310</span>
+            <p >The aroma of perfectly fried chicken makes my mouth water.</p>
+           
+    
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            </div>
+            <div class="item">
+                <img src="https://masalaandchai.com/wp-content/uploads/2022/03/Butter-Chicken.jpg" alt="Chicken Curry">
+                <h3>Chicken Curry</h3>
+                <span align="center" style="font-size:150%;">Price:280</span>
+                <p >Mexican herbs sprinkled on onion, capsicum, tomato & jalapeno</p>
+          
+          
+                <span align="left">Choose Quantity</span>
+                <!-- <button class="button">Green</button> -->
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> 
+                <br>
+                <br>
+                <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://i1.wp.com/www.thegarlicdiaries.com/wp-content/uploads/2016/09/DSC_0127.jpg" alt="Natraki Chicken">
+                    <h3>Natraki Chicken</h3>
+                    <span align="center" style="font-size:150%;">Price:235</span>
+                    <p >The best dishes have chicken in them.</p>
+                   
+        
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                        <img src="https://tse2.mm.bing.net/th?id=OIP.mLh4uLRGRO8sSEc5Uk5HyQHaJV&pid=Api&P=0" alt="Tomato Chicken">
+                        <h3>Tomato Chicken</h3>
+                        <span align="center" style="font-size:150%;">Price:255</span>
+                        <p >Eat chicken drumsticks, and you can almost hear the beat.</p>
+                       
+           
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                    
+     
+        </section>
+        <SCRIPT>
+          function changeText(element) {
+      element.innerHTML = "Added to Cart  &#x2705;";
+      alert("Items Added To cart");
+      
+    }
+        </SCRIPT>
+    
+      <footer>
+        <div class="footer-info">
+          <h3 class="h3">Ordering Info:</h3>
+          <span>Phone Number: 7488204975</Span>
+            <br>
+          <span>Delivery Hours: Mon-Sat 11am-9pm</span>
+        </div>
+        <div class="footer-follow">
+          <h3 class="h3">Follow Us:</h3>
+          <ul>
+            <li><a href="https://www.instagram.com/nitin_patel04s/">Instagram</a></li>
+            <li><a href="https://twitter.com/foodordersite">Twitter</a></li>
+            <li><a href="https://www.facebook.com/foodordersite/">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer-instructions">
+          <br>
+          <h3 class="h3">Instructions:</h3>
+
+          <span style="font-family:inherit">
+            "Our food is made fresh daily using only the highest quality, organic ingredients. We follow strict hygiene and safety protocols to ensure that our dishes are always healthy and safe to eat."
+          </span>
+          <br>
+            <span style="font-family:inherit">
+              "Vegetarian and vegan options are available on request. Our menu also includes gluten-free and nut-free dishes for customers with specific dietary requirements."
+              
+            </span>
+            <br>
+            <br>
+          <span>All Rights Reserved Copyright</span>
+        </div>
+
+      </footer>
+	
+	
+</body>
+</html>

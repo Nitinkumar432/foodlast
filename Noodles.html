@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cake </title>
+
+</head>
+<style>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-left:10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+/* .location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}  */
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.item {
+  width: 300px;
+  height:370px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(69, 32, 32, 0.1);
+  text-align: center;
+  background-color: #ffffff;
+}
+.item:hover{
+  background-color:aliceblue;
+}
+
+.item img {
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+.tem img:hover{
+    
+        transform: scale(1.1);
+
+    
+}
+
+.item h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  border-radius: 15px;
+  
+  width:100%;
+  height:7%;
+  text-align: center;
+}
+
+.item p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button {
+  background-color: #db261d; /* Green */
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor:pointer;
+}
+.button:hover{
+  background-color: #db261d;
+
+  border-color: #f2f2f2;
+  border-style:double;
+}
+.rec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(220, 225, 228);
+    border-radius: 15px;
+    padding: 1.1%;
+    margin-bottom: 30px;
+    margin-top: 12px;
+    margin-right: 8px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #1f243a;
+  color:white;
+}
+
+.footer-info h3,
+.footer-follow h3,
+.footer-instructions h3 {
+  margin-top: 0;
+}
+
+.footer-follow ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-follow li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-follow li:last-child {
+  margin-right: 0;
+}
+
+.footer-follow img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.footer-follow a {
+  text-decoration: none;
+}
+.h3{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* background-color: #bc751e; */
+  color: #ffffff;
+}
+h83{
+  background-color: #bc751e;
+}
+
+
+.h1{
+  font-size: 250%;
+  color:#ff8c00;
+  font-family: Impact;
+}
+body{
+  background-color: rgb(245, 235, 220);
+}
+.m1{
+  text-align:center;
+  margin-top:0px;
+  background-color:#ff8c00;
+  font-family: Tahoma;
+
+
+}
+.of{
+  margin-top:0%;
+  width:100%;
+  height:300px;
+}
+.of:hover{
+  border-style:inset;
+}
+.cart{
+  width:30px;
+  margin-right:20px;
+  height:25px;
+}
+.image-containerbr {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right:30px;
+  background-color: rgb(10, 84, 60);
+  color:aliceblue;
+  border-radius:10px;
+  padding: 10px;
+}
+
+.overlay h2, .overlay p {
+  margin: 0;
+}
+
+.detect-location-btn {
+    background-color: #eff2f7e8;
+    
+    border-style: initial;
+    text-align:left;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+   
+    font-size: 5px;
+    font-weight: 600;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+    /* font-weight: bold; */
+    padding: 10px 20px;
+    position: relative;
+    width:153px;
+    margin-left:120px;
+    color:#222222;
+  }
+  
+  .fas.fa-map-marker-alt {
+    margin-right: 5px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    color:#2e3412;
+    font-size:290%;
+    
+  }
+  
+  .location-img {
+    height: 20px;
+    margin-left: 15px;
+    position: absolute;
+    right: 10px;
+    left:115px;
+    top: 52%;
+    transform: translateY(-50%);
+    width: 20px;
+   
+  } 
+  .cart-message {
+    display: none;
+    color: green;
+  }
+ 
+  
+
+    #cart-message.added {
+      display: block;
+    }
+
+    #cart-message.added::before {
+      content: "\2714"; /* Unicode character for a tick sign */
+      margin-right: 5px;
+    }
+/*MONGINIS*/
+.cake-section {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+      
+    }
+    .cake-section img {
+      width: 200px;
+      height: 200px;
+      
+      object-fit: cover;
+      border-radius: 10px;
+      border-radius: 100px;
+      transition: transform 0.5s ease;
+    }
+    .cake-section img :hover{
+        transform: scale(1.1);
+
+    }
+    /* h3{
+        color:rgb(37, 35, 35);
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    } */
+    .view-all-section {
+      text-align: center;
+      margin-top: 0px;
+      margin-left:1300px;
+     
+
+     
+    }
+    .view-all-button {
+      background-color: rgb(226, 81, 105);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      
+    }
+    .view-all-button:HOVER{
+        background-color: brown;
+    }
+  
+  </style>
+</head>
+
+</style>
+<!-- <h1>Burger king</h1> -->
+<body>
+    <header>
+      <div class="logo">
+        <a href="*">
+          <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="The NVR Bistro">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5502/mainpure.html">Home</a></li>
+          <li><a href="http://127.0.0.1:5502/menu.html">Our Menu</a></li>
+          <li><a href="http://127.0.0.1:5502/Offer.html">Deals</a></li>
+          <li><a href="http://127.0.0.1:5502/order.html">Order</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About Us</a></li>
+          <a href="http://127.0.0.1:5502/detectlocation.html" class="detect-location-link">
+            <button class="detect-location-btn">
+              <b class="fas fa-map-marker-alt">Locate me<img class="location-img" src="https://www.burgerking.in/static/media/detect-location.054d5431.svg"></b>
+            </button>
+          </a>
+        </ul>
+      </nav>
+      <div class="location-container">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <A href="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="The NVR Bistro"></A>
+          <a href="http://127.0.0.1:5502/login%20page%202.html"><img src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+          <!-- <span>Find a Burger King near you</span> -->
+        </div>
+      </div>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+       
+    </header>
+     
+    <h1 class="m1"> The Cinnaman</h1>
+    <h3 style="font-family:Helvetica;font-size:150%; margin-top: 0%;">Deals of the Day</h3>
+    
+    <img class="of" src="https://www.monginis.net/wp-content/uploads/2022/12/Monginis_E_commerce_Banner_Dec_2022.jpg" >
+    
+  </form>
+  <h1>SHOP BY CAKES</h1>
+  <div class="cake-section">
+    <a href="https://www.monginis.net/exotic-cakes" target="_blank">
+      <img src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/tall-and-fancy-pqouxp5t8lfjjchur84emwklu7ry19ddvnjqowky4w.jpg" alt="Exotic Cake">
+    </a>
+    <h3>EXOTIC CAKES</h3>
+  </div>
+  
+  <div class="cake-section">
+    <a href="https://www.monginis.net/premium-cakes" target="_blank">
+      <img src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/Premium-Cakes-pqov0r4xg7m39q23x1nr8mtjcapw1uhzarvjua1vww.jpg" alt="Premium Cake">
+    </a>
+    <h3>PREMIUM CAKES</h3>
+  </div>
+  
+  <div class="cake-section">
+    <a href="https://www.monginis.net/designer-cakes" target="_blank">
+      <img src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/Designer-Cakes-pqov1whtsx6pgke17jjcacdth921gj264gkwygckb4.jpg" alt="Designer Cake">
+    </a>
+    <h3>DESIGNER CAKES</h3>
+  </div>
+  <div class="cake-section">
+    <a href="https://www.monginis.net/exotic-cakes" target="_blank">
+      <img src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/3D-Special-Occasions-Cakes15-pqovduzwr1k15z0pdpmh0bqxjq45dwj8fndar6m95c.jpg" alt="Exotic Cake">
+    </a>
+    <h3>WEDDING CAKES</h3>
+  </div>
+  
+  <div class="cake-section">
+    <a href="https://www.monginis.net/premium-cakes" target="_blank">
+      <img src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/3D-Special-Occasions-Cakes113-pqovf9r703hikwyz5bkbqyxtmj5yxk4qmmlio4iztc.jpg" alt="Premium Cake">
+    </a>
+    <h3>PHOTO CAKES</h3>
+  </div>
+  
+  <div class="cake-section">
+    <a href="https://www.monginis.net/designer-cakes" target="_blank">
+      <img src="https://www.monginis.net/wp-content/uploads/elementor/thumbs/3D-Special-Occasions-Cakes110-pqovj7oto2vta18t4iwzph4fbpqe7us7i53u4wojps.jpg" alt="Designer Cake">
+    </a>
+    <h3>3D CAKES CAKES</h3>  
+  </div>
+  
+  </div>
+  
+  <div class="view-all-section">
+    <a href="https://www.monginis.net/all-cakes" target="_blank" class="view-all-button">View All Cakes</a>
+    </div>
+  <hr>
+  
+    <main>
+        <section class="menu">
+          <!-- <h2>Menu</h2> -->
+          <div class="item">
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1650354559267_20.jpg" alt="Turkey Burger">
+            <u><h3>Turkey Burger</h3></u> 
+            <span align="center" style="font-size:150%;">Price:160</span>
+            <p >Deluxe_Patty,Onions,Tomatoes</p>
+            <span align="left">KGS</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$10.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1640584952070_46.jpeg" alt="Spicy Tandoori">
+            <h3>Spicy Tandoori</h3>
+            <span align="center" style="font-size:150%;">Price:130</span>
+            <p >Tandoori Chicken,Chedder,Cheese</p>
+        
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+           </select> 
+           <br>
+           <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$12.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1664615206910_68.jpg" alt="Cheese burger">
+            <h3>Cheese Burger</h3>
+            <span align="center" style="font-size:150%;">Price:100</span>
+            <p >Grilled Onions,Mayo,Mustard</p>
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+           <div class="item">
+          <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1664615827821_72.jpg" alt="Spicy Buffalo">
+          <h3>Beyond meat burger</h3>
+          <span align="center" style="font-size:150%;">Price:200</span>
+            <p >Crispy Chicken,Mazza Cheese,Grilled Onion </p>
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          
+          <div class="item"> 
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1640584952070_46.jpeg" alt="Creamy Mushroom">
+            
+            <h3>Creamy Mushroom</h3>
+
+            <span align="center" style="font-size:150%;">Price:170</span>
+            <p >cream of Mushroom,Mazza Cheese,Grilled_Onions</p>
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1622264821952_61.jpg" alt="Crispy Chicken">
+            
+            <h3>Crispy Chicken</h3>
+            <span align="center" style="font-size:150%;">Price:120</span>
+            <p>Crispy_Chicken,Chedder,Cheese,Lettuce,Pickles</p>
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1669962149488_93.jpg" alt="Chicken Paradise">
+            <h3>Hawaiian Burger</h3>
+            <span align="center" style="font-size:150%;">Price:150</span>
+            <p >Pine Apple,Mayo,Mustard</p>
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <!-- <div class="item">
+            <img src="https://freepngimg.com/download/burger%20sandwich/12-hamburger-burger-png-image.png" alt="Burger">
+            <h3>Burger</h3>
+            <p>A juicy burger with all the fixings.</p> -->
+            <!-- <p>$10.99</p> -->
+          <div class="item">
+          <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1622208358818_1.jpg" alt="Chicken Paradise">
+          <h3>Chicken Paradise</h3>
+          <span align="center" style="font-size:150%;">Price:160</span>
+          <p >Grilled Onions,Mayo,Mustard,chipotle Sauce</p>
+          <span align="left">KGS</span>
+          <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+          <br>
+          <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          <div class="item">
+            <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1622095246767_82.jpg" alt="Lazeero">
+            <h3>Lazeero</h3>
+            <span align="center" style="font-size:150%;">Price:140</span>
+            <p >Grilled Onions,Mayo,Mustard</p>
+            
+            <span align="left">KGS</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            </div>
+            <div class="item">
+                <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1622264821952_61.jpg" alt="Double Mozza">
+                <h3>Double Mozza</h3>
+                <span align="center" style="font-size:150%;">Price:180</span>
+                <p >Moza Sticks,Mayo,Mustard</p>
+                <span align="left">KGS</span>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1622095117631_39.jpg" alt="BBQ Chicken">
+                    <h3>BBQ Chicken</h3>
+                    <span align="center" style="font-size:150%;">Price:135</span>
+                    <p >Grilled Chicken,Grilled Onions,Mayo,Mustard</p>
+                    <span align="left">KGS</span>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br>
+                    <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                        <img src="https://cakesonline.monginis.net/uploads/ecomAdmin/PROD_IMG_UP/1622208917507_90.jpg" alt="Creamy Mushroom">
+                        <h3>Creamy Mushroom</h3>
+                        <span align="center" style="font-size:150%;">Price:140</span>
+                        <p >Cream of Mushroom,Mazza Cheese,Mustard</p>
+                        <span align="left">KGS</span>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br>
+                        <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+          
+     
+        </section>
+    </main>
+    <script>
+      function addToCart(itemName, itemPrice) {
+        var quantity = document.getElementById("quantity").value;
+        var totalPrice = itemPrice * quantity;
+  
+        // Send the cart item details to the server-side for further processing
+        // You can use AJAX or fetch API to send a request to your server and handle cart logic there
+        // Example: fetch('/add-to-cart', {
+        //            method: 'POST',
+        //            body: JSON.stringify({ itemName, quantity, totalPrice }),
+        //            headers: { 'Content-Type': 'application/json' }
+        //          }).then(handleResponse);
+  
+        // For demonstration purposes, display a notification with the cart details
+        var notification = document.createElement("div");
+        notification.innerHTML = "Item added to cart: " + itemName + " (Quantity: " + quantity + ", Total Price: $" + totalPrice + ")";
+        notification.classList.add("notification");
+  
+        // Append the notification to the document body
+        document.body.appendChild(notification);
+  
+        // Automatically remove the notification after a certain duration (e.g., 3 seconds)
+        setTimeout(function() {
+          document.body.removeChild(notification);
+          notification.innerHTML = "Item added to cart: " + itemName + " (Quantity: " + quantity + ", Total Price: $" + totalPrice + ")";
+        }, 3000);
+      }
+    </script>
+    <SCRIPT>
+      function changeText(element) {
+  element.innerHTML = "Added to Cart &#x2705;";
+  alert("Items Added To cart");
+  
+}
+    </SCRIPT>
+
+<footer>
+  <div class="footer-info">
+    <h3>Ordering Info:</h3>
+    <span>Phone Number: 7488204975</Span>
+      <br>
+    <span>Delivery Hours: Mon-Sat 11am-9pm</span>
+  </div>
+  <div class="footer-follow">
+    
+    <h3>Follow Us:</h3>
+    <ul>
+        <li><a href="https://twitter.com/foodordersite"><img src="https://th.bing.com/th/id/OIP.QoqrOjCO2QJ2GkxbFJaovAHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Twitter"></a></li>
+        <li><a href="https://www.facebook.com/foodordersite/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook"></a></li>
+        <li><a href="https://www.instagram.com/nitin_patel04s/"><img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=w240-h480-rw" alt="Instagram"></a></li>
+    </ul>
+  </div>
+  <div class="footer-instructions">
+    <br>
+    <h3>Instructions:</h3>
+
+    <span style="font-family:inherit">
+      "Our food is made fresh daily using only the highest quality, organic ingredients. We follow strict hygiene and safety protocols to ensure that our dishes are always healthy and safe to eat."
+    </span>
+    <br>
+  
+      <span>
+        By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. 
+        
+      </span style="font-family:inherit">
+      <br>
+      <span style="font-family:inherit">
+      
+        All trademarks are properties of their respective owners. 2008-2023 © NVR bistro™ Ltd. All rights reserved.
+      </span>
+      <br>
+      <br>
+    <span>All Rights Reserved Copyright</span>
+  </div>
+
+</footer>
+
+
+	
+	
+</body>
+</html>

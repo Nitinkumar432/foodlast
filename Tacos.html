@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tacos</title>
+
+</head>
+<style>
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-left:10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+/* .location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}  */
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.item {
+  width: 300px;
+  height:370px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(69, 32, 32, 0.1);
+  text-align: center;
+  background-color: #ffffff;
+}
+.item:hover{
+  background-color:aliceblue;
+}
+
+.item img {
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  border-radius: 15px;
+  
+  width:100%;
+  height:7%;
+  text-align: center;
+}
+
+.item p {
+  margin-top: 5px;
+  font-size: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button {
+  background-color: #db261d; /* Green */
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor:pointer;
+}
+.button:hover{
+  background-color: #db261d;
+
+  border-color: #f2f2f2;
+  border-style:double;
+}
+.rec{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(220, 225, 228);
+    border-radius: 15px;
+    padding: 1.1%;
+    margin-bottom: 30px;
+    margin-top: 12px;
+    margin-right: 8px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #1f243a;
+  color:white;
+}
+
+.footer-info h3,
+.footer-follow h3,
+.footer-instructions h3 {
+  margin-top: 0;
+}
+
+.footer-follow ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-follow li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-follow li:last-child {
+  margin-right: 0;
+}
+
+.footer-follow img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.footer-follow a {
+  text-decoration: none;
+}
+.h3{
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* background-color: #bc751e; */
+  color: #ffffff;
+}
+h83{
+  background-color: #bc751e;
+}
+
+
+.h1{
+  font-size: 250%;
+  color:#ff8c00;
+  font-family: Impact;
+}
+body{
+  background-color: rgb(245, 235, 220);
+}
+.m1{
+  text-align:center;
+  margin-top:0px;
+  background-color:#ff8c00;
+  font-family: Tahoma;
+
+
+}
+.of{
+  margin-top:0%;
+  width:100%;
+  height:400px;
+
+}
+.of:hover{
+  border-style:inset;
+}
+.cart{
+  width:30px;
+  margin-right:20px;
+  height:25px;
+}
+
+</style>
+<!-- <h1>Burger king</h1> -->
+<body>
+    <header>
+      <div class="logo">
+        <a href="*">
+          <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="The NVR Bistro">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5502/mainpure.html">Home</a></li>
+          <li><a href="http://127.0.0.1:5502/menu.html">Our Menu</a></li>
+          <li><a href="http://127.0.0.1:5502/Offer.html">Deals</a></li>
+          <li><a href="#">Order</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="location-container">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+          <A href="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="The NVR Bistro"></A>
+          <a href="http://127.0.0.1:5502/login%20page%202.html"><img src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+          <!-- <span>Find a Burger King near you</span> -->
+        </div>
+      </div>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+       
+    </header>
+     
+    <h1 class="m1"> Tacos Al Pastor</h1>
+    <h3 style="font-family:Helvetica;font-size:150%; margin-top: 0%;">Deals of the Day</h3>
+    
+    <img class="of" src="https://soyacincau.com/wp-content/uploads/2021/03/210322-tacobell-malaysia-kaw-kaw.jpg" >
+    
+  </form>
+  <hr>
+    <main>
+        <section class="menu">
+          <!-- <h2>Menu</h2> -->
+          <div class="item">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/taqdpurmj6kcoqruqtpb" alt="Turkey Burger">
+            <u><h3>Platter Bundle</h3></u> 
+            <span align="center" style="font-size:150%;">Price:160</span>
+            <p >For the party lover .</p>
+            <span align="left">Choose Quantity</span>
+            <!-- <button class="button">Green</button> -->
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select> 
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$10.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/582fd55b1a1ef23330d77a1849a2f008" alt="Spicy Tandoori">
+            <h3>Strategic Timeout Bundle</h3>
+            <span align="center" style="font-size:150%;">Price:130</span>
+            <p >[SAVE UPTO 20%]| [Serves 2]  Classic Burrito</p>
+        
+            <span align="left">Choose Quantity</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+           </select> 
+           <br>
+           <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$12.99</p> -->
+          </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7d78b2d8fb03bbf11fbfdd48afbfba9" alt="Cheese burger">
+            <h3>Opening Pair Bundle</h3>
+            <span align="center" style="font-size:150%;">Price:100</span>
+            <p >[SAVE UPTO 15%]| [Serves 2] </p>
+            <span align="left">Choose Quantity</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+           <div class="item">
+          <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/9750f6e0062654e3466c2d4b67f24307" alt="Spicy Buffalo">
+          <h3>Top of the order bundle</h3>
+          <span align="center" style="font-size:150%;">Price:200</span>
+            <p >[SAVE UPTO 29%]|[Serves 4]</p>
+            <span align="left">Choose Quantity</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          
+          <div class="item">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/944243116f6154b8394494b7f3c161d6" alt="Crispy Chicken">
+            <h3>Strategic Timeout Bundle</h3>
+            <span align="center" style="font-size:150%;">Price:120</span>
+            <p>es[SAVE UPTO 20%]| [Serves 2]</p>
+            <span align="left">Choose Quantity</span>
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          
+          
+          
+          <div class="item">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/443bd151a51dcc4e1b1ba130c8d4c636" alt="Hawaiian Burger">
+            <h3>Raining Chicken Bundle</h3>
+            <span align="center" style="font-size:150%;">Price:150</span>
+            <p >[SAVE UPTO 10%]| [Serves 2] </p>
+            <span align="left">Choose Quantity</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <!-- <div class="item">
+            <img src="https://freepngimg.com/download/burger%20sandwich/12-hamburger-burger-png-image.png" alt="Burger">
+            <h3>Burger</h3>
+            <p>A juicy burger with all the fixings.</p> -->
+            <!-- <p>$10.99</p> -->
+          <div class="item">
+          <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7d78b2d8fb03bbf11fbfdd48afbfba9" alt="Chicken Paradise">
+          <h3>Chicken Paradise</h3>
+          <span align="center" style="font-size:150%;">Price:160</span>
+          <p >Grilled Onions,Mayo,Mustard,chipotle Sauce</p>
+          <span align="left">Choose Quantity</span>
+          <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+          </select>
+          <br>
+          <button class="button" onclick="changeText(this)">Add to cart</button>
+          </div>
+          <div class="item">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/de40562f6daee1ddf43d3ea08f73d184" alt="Lazeero">
+            <h3>Opening Pair Bundle</h3>
+            <span align="center" style="font-size:150%;">Price:140</span>
+            <p >Grilled Onions,Mayo,Mustard</p>
+            
+            <span align="left">Choose Quantity</span>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <button class="button" onclick="changeText(this)">Add to cart</button>
+            </div>
+            <div class="item">
+                <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/a0b8fc8f7154a2756c13072060f07e7e" alt="Double Mozza">
+                <h3>3 down bundle</h3>
+                <span align="center" style="font-size:150%;">Price:180</span>
+                <p >[SAVE UPTO 29%]| [Serves 4] </p>
+                <span align="left">Choose Quantity</span>
+                <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <br>
+                <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/de40562f6daee1ddf43d3ea08f73d184" alt="BBQ Chicken">
+                    <h3>Big Bell Box</h3>
+                    <span align="center" style="font-size:150%;">Price:135</span>
+                    <p >Meal for 1 (save up to 47%)</p>
+                    <span align="left">Choose Quantity</span>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br>
+                    <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                        <img src="https://www.indiablooms.com/life_pic/2020/4e32f55c8607ec0b74c868d548942e26.jpg" alt="Creamy Mushroom">
+                        <h3>Cheese Max Box</h3>
+                        <span align="center" style="font-size:150%;">Price:140</span>
+                        <p >ts cheese like never before</p>
+                        <span align="left">Choose Quantity</span>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <br>
+                        <button class="button" onclick="changeText(this)">Add to cart</button>
+                </div>
+                <div class="item">
+                  <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/e7d78b2d8fb03bbf11fbfdd48afbfba9" alt="Cheese burger">
+                  <h3>Opening Pair Bundle</h3>
+                  <span align="center" style="font-size:150%;">Price:100</span>
+                  <p >[SAVE UPTO 15%]| [Serves 2] </p>
+                  <span align="left">Choose Quantity</span>
+                  <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                  </select>
+                  <br>
+                  <button class="button" onclick="changeText(this)">Add to cart</button>
+                  <!-- <p>$8.99</p> -->
+                </div>
+                    
+     
+        </section>
+        <SCRIPT>
+          function changeText(element) {
+      element.innerHTML = "Added to Cart  &#x2705;";
+      alert("Items Added To cart");
+      
+    }
+        </SCRIPT>
+    
+        <footer>
+          <div class="footer-info">
+            <h3>Ordering Info:</h3>
+            <span>Phone Number: 7488204975</Span>
+              <br>
+            <span>Delivery Hours: Mon-Sat 11am-9pm</span>
+          </div>
+          <div class="footer-follow">
+            
+            <h3>Follow Us:</h3>
+            <ul>
+                <li><a href="https://twitter.com/foodordersite"><img src="https://th.bing.com/th/id/OIP.QoqrOjCO2QJ2GkxbFJaovAHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Twitter"></a></li>
+                <li><a href="https://www.facebook.com/foodordersite/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/nitin_patel04s/"><img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=w240-h480-rw" alt="Instagram"></a></li>
+            </ul>
+          </div>
+          <div class="footer-instructions">
+            <br>
+            <h3>Instructions:</h3>
+  
+            <span style="font-family:inherit">
+              "Our food is made fresh daily using only the highest quality, organic ingredients. We follow strict hygiene and safety protocols to ensure that our dishes are always healthy and safe to eat."
+            </span>
+            <br>
+          
+              <span>
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. 
+                
+              </span style="font-family:inherit">
+              <br>
+              <span style="font-family:inherit">
+              
+                All trademarks are properties of their respective owners. 2008-2023 © NVR bistro™ Ltd. All rights reserved.
+              </span>
+              <br>
+              <br>
+            <span>All Rights Reserved Copyright</span>
+          </div>
+        
+        </footer>
+	
+</body>
+</html>

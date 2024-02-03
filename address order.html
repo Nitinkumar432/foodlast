@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delivery Address Form</title>
+	<style>
+        body{
+            background-color: rgb(226, 234, 231);
+        }
+        .a {
+        color: rgb(239, 239, 239);
+        background-color:#4CAF50;
+        text-align:center;
+        padding:2%;
+        padding-bottom:3%;
+		border-radius: 10px;
+		text-decoration: none;
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+		margin-left:100px;
+		
+       }
+	   .ab {
+        color: rgb(239, 239, 239);
+        background-color:#f21d0a;
+        text-align:center;
+        padding:2%;
+        padding-bottom:3%;
+		border-radius: 10px;
+		text-decoration: none;
+		font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       }
+    
+		form {
+			width: 20%;
+			margin: 0 auto;
+			font-family: Arial, sans-serif;
+			background-color: #f7f7f7;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		
+		input[type=text], select {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-top: 6px;
+			margin-bottom: 16px;
+			resize: vertical;
+		}
+		
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			float: right;
+		}
+		
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		
+		.container {
+			border-radius: 5px;
+			background-color: #f2f2f2;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div class="container">
+			<h1>Delivery Address</h1>
+			<label for="fname">Full Name</label>
+			<input type="text" id="fname" name="fullname" placeholder="Enter your full name">
+
+			<label for="address">Address</label>
+			<input type="text" id="address" name="address" placeholder="Enter your street address">
+
+			<label for="city">City</label>
+			<input type="text" id="city" name="city" placeholder="Enter your city name">
+
+			<label for="state">State/Province</label>
+			<select id="state" name="state">
+				<option value="AL">Bihar</option>
+				<option value="AK">Uttar pradesh</option>
+				<option value="AZ">Punjab</option>
+				<option value="AR">West Bengal</option>
+				<option value="CA">Himachal Pradesh</option>
+            
+            </select>
+            <label for="ok">Phone no</label>
+			<input type="text" id="address" name="address" placeholder="Enter yourphone number">
+            <label for="ok">Landmark</label>
+			<input type="text" id="address" name="address" placeholder="Enter nearby Famous places">
+            <a class="ab" href="http://127.0.0.1:5502/mainpure.html">Back To Home</a>
+		
+        
+             
+            <a class="a" href="http://127.0.0.1:5502/addrsss2.html">Next</a>
+            
+            
+               
+        </div>
+    </form>
+</body>

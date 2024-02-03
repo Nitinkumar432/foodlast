@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+/*header*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-left:10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+}
+.kcart{
+  width:30px;
+  margin-right:20px;
+  height:25px;
+}
+/* Cart Section */
+/* Cart Section */
+/* Cart Container */
+.cart {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.cart-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Cart Items */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px;
+}
+/* Cart Item Image */
+.cart-item-image img {
+width:210px;
+height: auto;
+ border-radius:15px ;
+}
+
+/* Cart Item Info */
+.cart-item-info {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+flex-grow: 1;
+margin-right: 20px;
+}
+
+.item-name {
+font-size: 24px;
+font-weight: 700;
+margin: 0;
+}
+
+.item-desc {
+font-size: 16px;
+margin: 0;
+}
+
+.item-quantity {
+display: flex;
+align-items: center;
+gap: 10px;
+margin-top: 10px;
+}
+
+.quantity-btn {
+border: none;
+background-color: #f0f0f0;
+color: #000;
+font-size: 20px;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.quantity-btn:hover {
+background-color: #e0e0e0;
+}
+
+.quantity-input {
+border: 1px solid #ccc;
+background-color: #f0f0f0;
+color: #000;
+font-size: 16px;
+width: 50px;
+height: 30px;
+text-align: center;
+}
+
+.remove-btn {
+border: none;
+background-color: transparent;
+color: #cc0000;
+font-size: 16px;
+text-decoration: underline;
+cursor: pointer;
+}
+
+.remove-btn:hover {
+color: #ff0000;
+}
+
+/* Cart Item Price */
+.cart-item-price {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+gap: 10px;
+}
+
+.item-price {
+font-size: 24px;
+font-weight: 700;
+margin: 0;
+}
+
+.item-offer {
+font-size: 14px;
+font-style: italic;
+margin: 0;
+}
+
+/* Cart Summary */
+.cart-summary {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-end;
+border-top: 1px solid #ccc;
+margin-top: 20px;
+padding-top: 20px;
+}
+
+.subtotal, .tax, .total {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 10px;
+}
+
+.subtotal p, .tax p, .total p {
+font-size: 20px;
+font-weight: 700;
+margin: 0;
+}
+
+.subtotal p:first-child, .tax p:first-child, .total p:first-child {
+font-weight: 400;
+}
+
+.checkout-btn {
+border: none;
+background-color: #cc0000;
+color: #fff;
+font-size: 24px;
+font-weight: 700;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.checkout-btn:hover {
+background-color: #ff0000;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<header>
+	<div class="logo">
+		<a href="#">
+		  <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="The NVR Bistro">
+		  
+		</a>
+	  </div>
+	  <nav>
+		<ul>
+		  <li><a href="http://127.0.0.1:5501/mainpure.html">Home</a></li>
+		  <li><a href="http://127.0.0.1:5501/menu.html">Our Menu</a></li>
+		  <li><a href="http://127.0.0.1:5501/Offer.html">Deals</a></li>
+		  <li><a href="http://127.0.0.1:5501/order.html">Order</a></li>
+		  <li><a href="http://127.0.0.1:5501/contact.html">Contact</a></li>
+		  <li><a href="#">About Us</a></li>
+		</ul>
+	  </nav>
+	  <div class="location-container">
+		
+	  
+		<div class="location">
+		  <i class="fas fa-map-marker-alt"></i>
+		  <a href ="http://127.0.0.1:5501/Cart.html"><img class="kcart" src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="Cart"></a>
+		
+		  <a href="http://127.0.0.1:5501/login%20page%202.html"><img class="id" src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+		  
+		  <!-- <span>Find a Burger King near you</span> -->
+		</div>
+	  </div>
+	  <div class="search-container">
+		<form>
+		  <input type="text" placeholder="Search">
+		  <button type="submit"><i class="fas fa-search"></i></button>
+		</form>
+	  </div>
+
+</header>
+<body>
+
+	<div class="cart">
+		<div class="cart-header">
+		  <h2>Your Cart</h2>
+		</div>
+		<div class="cart-items">
+		  <div class="cart-item">
+			<div class="cart-item-image">
+			  <img src="https://images6.alphacoders.com/698/698287.jpg" alt="item image">
+			</div>
+			<div class="cart-item-info">
+			  <h4 class="item-name">Pizza</h4>
+			  <p class="item-desc">lettuce, cheese, pickles</p>
+			  <div class="item-quantity">
+				<button class="quantity-btn minus">-</button>
+				<input class="quantity-input" type="number" min="1" value="1">
+				<button class="quantity-btn plus">+</button>
+			  </div>
+			  <button class="remove-btn">Remove</button>
+			</div>
+			<div class="cart-item-price">
+			  <p class="item-price">320rs</p>
+			  <p class="item-offer">10% off</p>
+			</div>
+		  </div>
+		  <div class="cart-item">
+			<div class="cart-item-image">
+			  <img src="https://i.pinimg.com/originals/b6/51/c4/b651c473c595f728118644568221637e.jpg" alt="item image">
+			</div>
+			<div class="cart-item-info">
+			  <h4 class="item-name">Burger</h4>
+			  <p class="item-desc">Crispy golden fries.</p>
+			  <div class="item-quantity">
+				<button class="quantity-btn minus">-</button>
+				<input class="quantity-input" type="number" min="1" value="1">
+				<button class="quantity-btn plus">+</button>
+			  </div>
+			  <button class="remove-btn">Remove</button>
+			</div>
+			<div class="cart-item-price">
+			  <p class="item-price">199rs</p>
+			  <p class="item-offer">-</p>
+			</div>
+		  </div>
+		</div>
+		<div class="cart-summary">
+		  <div class="subtotal">
+			<p>Subtotal:</p>
+			<p>519rs</p>
+		  </div>
+		  <div class="tax">
+			<p>Tax:</p>
+			<p>56rs</p>
+		  </div>
+		  <div class="total">
+			<p >Total:</p>
+			<p>575rs</p>
+		  </div>
+		  <a href="http://127.0.0.1:5501/addrsss2.html"><button class="checkout-btn">Checkout</button></a>
+		</div>
+	  </div>
+	  
+		
+	<script>
+
+
+// Remove item from cart
+
+
+const minusBtns = document.querySelectorAll('.quantity-btn.minus');
+const plusBtns = document.querySelectorAll('.quantity-btn.plus');
+const quantityInputs = document.querySelectorAll('.quantity-input');
+const removeBtns = document.querySelectorAll('.remove-btn');
+
+// Decrease quantity
+minusBtns.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    if (quantityInputs[i].value > 1) {
+      quantityInputs[i].value = parseInt(quantityInputs[i].value) - 1;
+      updateCartItemTotal(i);
+      updateCartSummary();
+    }
+  });
+});
+
+// Increase quantity
+plusBtns.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    quantityInputs[i].value = parseInt(quantityInputs[i].value) + 1;
+    updateCartItemTotal(i);
+    updateCartSummary();
+  });
+});
+
+// Remove item from cart
+removeBtns.forEach((btn, i) => {
+  btn.addEventListener('click', () => {
+    btn.closest('.cart-item').remove();
+    updateCartSummary();
+  });
+});
+
+// Update item total price
+function updateCartItemTotal(index) {
+  const itemPrice = parseFloat(document.querySelectorAll('.item-price')[index].textContent.replace('rs', ''));
+  const quantity = parseInt(quantityInputs[index].value);
+  const itemTotal = document.querySelectorAll('.item-total p')[index];
+  itemTotal.textContent = (itemPrice * quantity) + 'rs';
+}
+
+// Update cart summary
+function updateCartSummary() {
+  const itemTotals = document.querySelectorAll('.item-total p');
+  let subtotal = 0;
+
+  itemTotals.forEach(itemTotal => {
+    subtotal += parseFloat(itemTotal.textContent.replace('rs', ''));
+  });
+
+  const tax = (subtotal * 0.06).toFixed(2);
+  const total = (subtotal + parseFloat(tax)).toFixed(2);
+
+  document.querySelector('.subtotal p:last-child').textContent = subtotal + 'rs';
+  document.querySelector('.tax p:last-child').textContent = tax + 'rs';
+  document.querySelector('.total p:last-child').textContent = total + 'rs';
+}
+
+
+
+	</script>
+	  
+	
+</body>
+</html>

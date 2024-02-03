@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color: rgba(197, 176, 176, 0.789);
+}
+.container{
+    background-color: rgb(222, 222, 222);
+    position: absolute;
+    padding:10px;
+    left: 32%;
+    width: 500px;
+    height: 600px;
+    top: 15px;
+    text-align: center;
+    padding: 50px;
+}
+#inp{
+    width: 400px;
+    height: 20px;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 2px solid rgb(194, 250, 231);
+}
+.remember{
+    overflow: hidden;
+    text-align: left;   
+}
+.remember span a{
+    text-decoration: none;
+    color: red;
+}
+#btn{
+    background-color: rgb(84, 195, 158);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    width: 70px;
+    border: 0.5px solid rgb(255, 255, 255);
+}
+#social{
+    width: 100px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(66, 174, 241);
+    border: 0.5px solid rgb(255, 255, 255);
+    background-image: url('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-twitter-square2-512.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* position: relative; */
+    padding-left: 0px;
+}
+#social1{
+    width: 100px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    background-color: rgb(65, 78, 152);
+    border: 0.5px solid rgb(255, 255, 255);
+    background-image: url('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-facebook-square2-512.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* position: relative; */
+    padding-left: 0px;
+}
+#social2{
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+    background-color: red;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-google-plus-square2-512.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+    color: rgb(255, 255, 255);
+    border: 0.5px solid rgb(255, 255, 255);
+    padding-left: 30px;
+}
+#btn12{
+    width: 125px;
+    height: 30px;
+    background-color: rgb(84, 195, 158);
+    border-radius: 5px;
+    color: white;
+    border: 0.5px solid rgb(255, 255, 255);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <input type="text" placeholder="User name" id="inp">
+        <br>
+        <input type="password" name="pass" id="inp">
+        <br>
+        <div class="remember">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="remember" id="chck">Remember Me
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+            <span>
+                <a href="http://127.0.0.1:5502/forgotpass.html">Forgot Password?</a>
+            </span>
+        </div><br>
+        <button id="btn">Log in</button>
+        <br><br><br>
+        <h3 >Login</h3>
+        <span style="font-size: large;">With your social media account</span>
+        <br><br><br>
+        <button id="social">‎ ‎ Twitter</button>
+        <button id="social1">ㅤㅤFacebook</button>
+        <button id="social2">‎ Google</button>
+        <br><br><br><hr><br>
+        <span>Don't have an Account?</span>
+        <span style="color: red;">Register Now!</span>
+        <br><br>
+        <a href="http://127.0.0.1:5502/register.html"><button id="btn12">REGISTER</button></a>
+        
+    </div>
+</body>
+</html>

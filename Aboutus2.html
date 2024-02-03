@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Your Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0909;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 1s ease-in-out infinite;
+    animation: wave 1s ease-in-out infinite, moveX 1s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        background-color: #241d1d;
+    }
+    50% {
+        background-color: #343635;
+    }
+}
+
+
+
+/* Rest of your existing styles */
+
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+li {
+    margin: 0;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffcc00;
+}
+
+.fa-icon {
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.fa-icon:hover {
+    transform: rotate(360deg);
+}
+
+.img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+/* Additional styles for the About Us page */
+.food-revolution-section,
+.awards-section,
+.founder-section,
+.customers-section {
+    position: relative;
+}
+
+/* Section 1: Food Website Revolution */
+.food-revolution-section {
+
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+   text-align: center;
+ 
+}
+.food-revolution-section p{
+    border:3px solid rgb(19, 201, 233);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    border-radius: 15px;
+    padding:20px;
+
+}
+
+/* Section 2: Our Multiple Awards */
+.awards-section {
+    background: url('path/to/awards-bg.jpg') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.award-image-container {
+    position: relative;
+}
+
+.awards-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+
+.award-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.award-image-container:hover .awards-image {
+    transform: scale(1.1);
+}
+
+.award-image-container:hover .award-text {
+    opacity: 1;
+}
+
+/* Section 3: Our Founder */
+.founder-section {
+    background: url('path/to/founder-bg.jpg') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.founder-image {
+    max-width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Section 4: Our Happy Customers */
+.customers-section {
+    background: url('path/to/customers-bg.jpg') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.customers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.customer-image {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.fr{
+    
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+        <li>
+            <img src="photo2.png" width="50px"  alt="Your Restaurant Logo" class="img">
+            <a  href="http://127.0.0.1:5502/mainpure.html"><i class="fas fa-home fa-icon"></i> Home</a>
+        </li>
+        <li><a href="http://127.0.0.1:5502/menu.html"><i class="fas fa-address-book fa-icon"></i> Order </a></li>
+            <li><a href="http://127.0.0.1:5502/Offer.html"><i class="fas fa-info-circle fa-icon"></i> About us</a></li>
+            <li><a href="http://127.0.0.1:5502/order.html"><i class="fas fa-sign-in-alt fa-icon"></i> Contact us</a></li>
+            <li><a href="http://127.0.0.1:5502/contact.html"><i class="fas fa-sign-out-alt fa-icon"></i> Logout</a></li>
+            <li><a href="http://127.0.0.1:5502/about%20us.html"><i class="fas fa-user-plus fa-icon"></i> Sign-up</a></li>
+        </ul>
+    </header>
+
+    <nav>
+        <!-- Your existing navigation menu -->
+    </nav>
+
+    <!-- Section 1: Food Website Revolution -->
+    <section class="food-revolution-section">
+        <h2>Food Website Revolution</h2>
+        <div class="awards-grid">
+            <div class="award-image-containers">
+                <img src="https://5.imimg.com/data5/PY/BW/UL/SELLER-19442961/fast-food-display-counter.jpg" alt="Award 1" class="awards-image">
+                
+            </div>
+
+       
+        <p>In the bustling world of the internet, where flavors travel faster than the speed of light, we embarked on a delectable journey to create a food website that would not only tantalize taste buds but also serve as a haven for culinary enthusiasts. This is the story of how our gastronomic adventure unfolded, from the initial spark of inspiration to the thriving digital culinary hub we proudly present today.</p>
+        <!-- Add relevant content and images -->
+    </section>
+
+    <!-- Section 2: Our Multiple Awards -->
+    <section class="awards-section">
+        <h2>Our Multiple Awards</h2>
+        <div class="awards-grid">
+            <div class="award-image-container">
+                <img src="https://rocketexpansion.com/wp-content/uploads/2022/03/Book-Awards-v2-FB.jpg" alt="Award 1" class="awards-image">
+                <div class="award-text">Award 1: [Nobel Prize for Best food ]</div>
+            </div>
+            <div class="award-image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjdfIiMuXhPgcp8fho1b_vfreqsquuWCWlUKNXQhA5L8ZkX9_esZOc1mpU6wj0HVF2OaY&usqp=CAU" alt="Award 2" class="awards-image">
+                <div class="award-text">Award 2: [Bharat Ratna for reserch on food ]</div>
+            </div>
+            <div class="award-image-container">
+                <img src="https://img.freepik.com/free-vector/realistic-award-with-lights-golden-confetti-trophy-with-figurine-holding-star-illustration_1284-55118.jpg" alt="Award 3" class="awards-image">
+                <div class="award-text">Award 3: [free of cost]</div>
+            </div>
+            <!-- Add more award images as needed -->
+        </div>
+    </section>
+
+    <!-- Section 3: Our Founder -->
+    <section class="founder-section">
+        <h2>Our Founder</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Nitin_Patel_2018.JPG" alt="Founder Image" class="founder-image">
+        <p class="fr">Meet Nitinbhai Patel </p>
+        <p class="fr">Born 18 - 03- 1978</p>
+        <p class="fr">Gujarat,India</p>
+    </section>
+
+    <!-- Section 4: Our Happy Customers -->
+    <section class="customers-section">
+        <h2>Our Happy Customers</h2>
+        <div class="customers-grid">
+            <img src="https://www.shutterstock.com/image-photo/indian-happy-customers-showing-thumbs-260nw-2048700443.jpg" alt="Customer 1" class="customer-image">
+            <img src="https://www.shutterstock.com/image-photo/indian-happy-male-customer-showing-260nw-2048697395.jpg" alt="Customer 2" class="customer-image">
+            <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/7d/c5/5c/happy-customers-eating.jpg" alt="Customer 3" class="customer-image">
+            <!-- Add more customer images as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Restaurant. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

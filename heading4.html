@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Images</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #image-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollAnimation 5s linear infinite;
+        }
+
+        .scrolling-image {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 0 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: floatAnimation 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes scrollAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(calc(-100vh + 100px));
+            }
+        }
+
+        @keyframes floatAnimation {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="image-container">
+    <!-- Add more scrolling images here -->
+    <div class="scrolling-image"></div>
+    <div class="scrolling-image"></div>
+    <div class="scrolling-image"></div>
+    <!-- Add more scrolling images here -->
+</div>
+
+<!-- Simulate content to scroll down -->
+<div style="height: 200vh; background-color: #f8f8f8;"></div>
+
+<script>
+    // You can optionally add more images dynamically using JavaScript
+    // Just make sure to adjust the styles accordingly
+
+    // Example: Adding an image dynamically
+    // const imageContainer = document.getElementById('image-container');
+    // const newImage = document.createElement('div');
+    // newImage.classList.add('scrolling-image');
+    // imageContainer.appendChild(newImage);
+</script>
+
+</body>
+</html>

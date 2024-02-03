@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offer</title>
+</head>
+<style>
+ header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-left:10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+.fas {
+  font-size: 16px;
+}
+
+
+
+
+.h1{
+  font-family: Impact;
+  font-size: 200%;
+  color:#ff8c00;
+
+}
+.kimg{
+  width:735px;
+  height:300px;
+  margin:10px;
+  padding:0px;
+  border:indigo;
+  margin-left:10px;
+  margin-right:0px;
+}
+.kimg:hover{
+  border-radius: 15px;
+  border-style:inset;
+  image-rendering: crisp-edges;
+
+
+}
+.um{
+  font-family: Tahoma;
+  font-size: 200%;
+  /* background-color: rgb(255, 255, 255); */
+  background-color:#ff8c00;
+  text-align:center;
+  margin-top:2px;
+  margin-bottom: 10px;
+  
+}
+
+.uk{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#ff8c00;
+  font-size: 100%;
+}
+/*footer*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: #1f243a;
+  color:white;
+}
+
+.footer-info h3,
+.footer-follow h3,
+.footer-instructions h3 {
+  margin-top: 0;
+}
+
+.footer-follow ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-follow li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-follow a {
+
+  text-decoration: none;
+}
+
+.footer-follow a:hover {
+  text-decoration: underline;
+  color:deepskyblue;
+}
+.h3{
+  /* background-color: #bc751e; */
+}
+</style>
+
+<body>
+    <header>
+      <div class="logo">
+        <a href="#">
+          <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="Burger King logo">
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="http://127.0.0.1:5501/mainpure.html">Home</a></li>
+          <li><a href="#">Our Menu</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">BK Delivers</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="location-container">
+        <div class="location">
+          <i class="fas fa-map-marker-alt"></i>
+       
+            <a href="http://127.0.0.1:5501/login%20page%202.html"><img src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+          <!-- <span>Find a Burger King near you</span> -->
+        </div>
+      </div>
+      <div class="search-container">
+        <form>
+          <input type="text" placeholder="Search">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+        
+        
+      </header>
+      <body>
+      <!-- <nav>
+       / <ul>
+          <li><a href="http://127.0.0.1:5502/food%20order.html#">Home</a></li>
+          <li><a href="http://127.0.0.1:5502/menu.html">Menu</a></li>
+          <li><a href="https://tse4.mm.bing.net/th?id=OIP.giu3TOeEIu0rhmMesF5zewHaEK&pid=Api&P=0">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav> -->
+  
+      <h2 class="um">Offer</h2>
+      
+
+      
+      <a href="http://127.0.0.1:5502/pizzalist.html"><img  class="kimg"  src="https://api.dominos.co.in/prod-olo-api/images/Home_Paytm_20210519.jpg"></a>
+      <img class="kimg"  src="https://api.dominos.co.in/prod-olo-api/images/amazon_home_20210412.jpg">
+      
+      <img class="kimg"  src="https://api.dominos.co.in/prod-olo-api/images/Home_airtel_30082020.jpg">
+      <img  class="kimg" src="https://api.dominos.co.in/prod-olo-api/images/Home_Freecharge_20210405.jpg">
+            
+      <img  class="kimg"  src="https://api.dominos.co.in/prod-olo-api/images/Dominos_Mobi_Home_20210503.jpg">
+      <img  class="kimg"  src="https://api.dominos.co.in/prod-olo-api/images/Home_payzapp_20201029.jpg">
+    
+    
+</body>
+<footer>
+  <div class="footer-info">
+    <h3 class="h3">Ordering Info:</h3>
+    <span>Phone Number: 7488204975</Span>
+      <br>
+    <span>Delivery Hours: Mon-Sat 11am-9pm</span>
+  </div>
+
+  <div class="footer-follow">
+    <h3 class="h3">Follow Us:</h3>
+    <ul>
+      <li><a href="https://www.instagram.com/nitin_patel04s/">Instagram</a></li>
+      <li><a href="https://twitter.com/foodordersite">Twitter</a></li>
+      <li><a href="https://www.facebook.com/foodordersite/">Facebook</a></li>
+    </ul>
+  </div>
+  <div class="footer-instructions">
+    <br>
+    <h3 class="h3">Instructions:</h3>
+
+
+    <span style="font-family:inherit">
+      "Our food is made fresh daily using only the highest quality, organic ingredients. We follow strict hygiene and safety protocols to ensure that our dishes are always healthy and safe to eat."
+    </span>
+    <br>
+  
+      <span>
+        By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. 
+        
+      </span style="font-family:inherit">
+      <br>
+      <span style="font-family:inherit">
+      
+        All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
+      </span>
+      <br>
+      <br>
+    <span>All Rights Reserved Copyright</span>        
+  </div>
+  
+  </footer>
+</html>

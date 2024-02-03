@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .main-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ddd;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .filter-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .filter-button:hover {
+            background-color: #45a049;
+        }
+
+        .search-containerss {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-inputss {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .search-buttonss {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .search-buttonss:hover {
+            background-color: #0056b3;
+        }
+
+        .food-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .food-item {
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .food-item:hover {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        .food-type {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .food-details {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .food-rating {
+            margin-top: 10px;
+            margin-right: 0px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #FFC107;
+        }
+
+        .star-icon {
+            margin-right: 5px;
+            color: #FFC107;
+        }
+
+        .food-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .food-link:hover .food-item {
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-link-button {
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 160px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .food-link-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        Awesome Food Hub
+    </header>
+    <nav class="main-nav">
+        <div>
+            <button class="filter-button" onclick="filterFood('all')">All</button>
+            <button class="filter-button" onclick="filterFood('veg')">Veg</button>
+            <button class="filter-button" onclick="filterFood('nonveg')">Non-Veg</button>
+        </div>
+        <div class="search-containerss">
+            <input type="text" class="search-inputss" placeholder="Search">
+            <button class="search-buttonss" onclick="searchFood()">Search</button>
+        </div>
+    </nav>
+    <div class="food-container"></div>
+
+    <script>
+        const foodData = [
+            { name: 'Margherita Pizza', type: 'veg', image: 'https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*', details: 'Classic Margherita pizza with tomato and mozzarella cheese.', rating: 4.5, link: 'http://127.0.0.1:5501/PAYMENT2.HTML' },
+            { name: 'Grilled Chicken Burger', type: 'nonveg', image: 'https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*', details: 'Juicy grilled chicken patty with fresh veggies and special sauce.', rating: 4.2, link: 'https://example.com/chicken-burger' },
+            { name: 'Mediterranean Salad', type: 'veg', image: 'https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*', details: 'Healthy salad with mixed greens, cherry tomatoes, olives, and feta cheese.', rating: 4.7, link: 'http://127.0.0.1:5501/PAYMENT2.HTML' },
+            { name: 'pizza', type: 'veg', image: 'https://hips.hearstapps.com/hmg-prod/images/classic-cheese-pizza-recipe-2-64429a0cb408b.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*', details: 'Healthy salad with mixed greens, cherry tomatoes, olives, and feta cheese.', rating: 4.7, link: 'https://example.com/mediterranean-salad' }
+        ];
+
+        function renderFood(foodItems = foodData) {
+            const foodContainer = document.querySelector('.food-container');
+            foodContainer.innerHTML = '';
+
+            foodItems.forEach(food => {
+                const foodItem = document.createElement('div');
+                foodItem.className = 'food-item';
+                foodItem.innerHTML = `
+                    <a href="${food.link}" class="food-link">
+                        <img class="food-image" src="${food.image}" alt="${food.name}">
+                        <div class="food-type">${food.type.toUpperCase()}</div>
+                        <div class="food-details">
+                            <h3>${food.name}</h3>
+                            <p>${food.details}</p>
+                        </div>
+                        <div class="food-rating">
+                            <span class="star-icon">⭐</span> ${food.rating}
+                        </div>
+                        <a class="food-link-button" href="${food.link}">View Details</a>
+                    </a>
+                `;
+                foodContainer.appendChild(foodItem);
+            });
+        }
+
+        function filterFood(type) {
+            const filteredFood = type === 'all' ? foodData : foodData.filter(food => food.type === type);
+            renderFood(filteredFood);
+        }
+
+        function searchFood() {
+            const searchInput = document.querySelector('.search-inputss');
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredFood = foodData.filter(food =>
+                food.name.toLowerCase().includes(searchTerm) ||
+                food.details.toLowerCase().includes(searchTerm)
+            );
+            renderFood(filteredFood);
+        }
+
+        // Initial rendering
+        renderFood();
+    </script>
+</body>
+
+</html>

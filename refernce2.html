@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Add your head content here -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        .main-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ddd;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .filter-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .filter-button:hover {
+            background-color: #45a049;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+
+        .food-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+            padding: 10px;
+        }
+
+        .food-item {
+            width: 250px; /* Reduced container size */
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .food-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .food-type {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .food-details {
+            margin-top: 10px;
+            font-size: 16px;
+            flex-grow: 1;
+        }
+
+        .food-price {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #007BFF;
+        }
+
+        .food-rating {
+            margin-top: auto; /* Align to bottom */
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #FFC107;
+        }
+
+        .star-icon {
+            margin-right: 5px;
+            color: #FFC107;
+        }
+
+        .add-to-cart {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        Awesome Food Hub
+    </header>
+    <nav class="main-nav">
+        <div>
+            <button class="filter-button" onclick="filterFood('all')">All</button>
+            <button class="filter-button" onclick="filterFood('veg')">Veg</button>
+            <button class="filter-button" onclick="filterFood('nonveg')">Non-Veg</button>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="search-button" onclick="searchFood()">Search</button>
+        </div>
+    </nav>
+    <div class="food-container"></div>
+
+    <script>
+        const foodData = [
+            { name: 'Margherita Pizza', type: 'veg', image: 'pizza.jpg', details: 'Classic Margherita pizza with tomato and mozzarella cheese.', price: 12.99, rating: 4.5 },
+            { name: 'Grilled Chicken Burger', type: 'nonveg', image: 'burger.jpg', details: 'Juicy grilled chicken patty with fresh veggies and special sauce.', price: 8.99, rating: 4.2 },
+            { name: 'Grilled Chicken Burger', type: 'nonveg', image: 'burger.jpg', details: 'Juicy grilled chicken patty with fresh veggies and special sauce.', price: 8.99, rating: 4.2 },
+            { name: 'Mediterranean Salad', type: 'veg', image: 'salad.jpg', details: 'Healthy salad with mixed greens, cherry tomatoes, olives, and feta cheese.', price: 6.99, rating: 4.7 },
+            // Add more food items here
+        ];
+
+        function renderFood(foodItems = foodData) {
+            const foodContainer = document.querySelector('.food-container');
+            foodContainer.innerHTML = '';
+
+            foodItems.forEach(food => {
+                const foodItem = document.createElement('div');
+                foodItem.className = 'food-item';
+                foodItem.innerHTML = `
+                    <img class="food-image" src="${food.image}" alt="${food.name}">
+                    <div class="food-type">${food.type.toUpperCase()}</div>
+                    <div class="food-details">
+                        <h3>${food.name}</h3>
+                        <p>${food.details}</p>
+                        <div class="food-price">$${food.price.toFixed(2)}</div>
+                    </div>
+                    <div class="food-rating">
+                        <span class="star-icon">⭐</span> ${food.rating}
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('${food.name}', ${food.price})">Add to Cart</button>
+                `;
+                foodContainer.appendChild(foodItem);
+            });
+        }
+
+        function filterFood(type) {
+            const filteredFood = type === 'all' ? foodData : foodData.filter(food => food.type === type);
+            renderFood(filteredFood);
+        }
+
+        function searchFood() {
+            const searchInput = document.querySelector('.search-input');
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredFood = foodData.filter(food => 
+                food.name.toLowerCase().includes(searchTerm) || 
+                food.details.toLowerCase().includes(searchTerm)
+            );
+            renderFood(filteredFood);
+        }
+
+        function addToCart(foodName, foodPrice) {
+            // Add your logic to handle adding to the cart
+            console.log(`Added ${foodName} to the cart. Price: $${foodPrice.toFixed(2)}`);
+        }
+
+        // Initial rendering
+        renderFood();
+    </script>
+</body>
+
+</html>
+

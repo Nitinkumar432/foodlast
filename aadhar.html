@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhar Card</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .right_side {
+            width: 100%;
+            height: 100vh;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .adhar_card {
+            width: 322px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .adhar {
+            background-color: white;
+            width: 100%;
+            height: 208px;
+            border-radius: 10px;
+            box-shadow: 2px 4px 9px grey;
+            position: relative;
+        }
+
+        .adhar_details {
+            width: 100%;
+            height: 70%;
+            display: grid;
+            grid-template-columns: .6fr 1fr .6fr;
+            grid-template-rows: auto;
+        }
+
+        img {
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+        }
+
+        .adhar_photo img {
+            width: 100%;
+            height: 105px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        .adhar_name p {
+            font-size: 1.3rem;
+            line-height: 1.9rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .adhar_scan img {
+            width: 100%;
+            height: 70px;
+        }
+
+        .bottom, .top {
+            position: relative;
+        }
+
+        #adhar_front_bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        #adhar_id_show {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1.9rem;
+        }
+
+        .adhar_back_side_details {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr .7fr;
+            grid-template-rows: 1fr;
+            padding: 5px;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            font-weight: 600;
+        }
+
+        #back_id_show {
+            position: absolute;
+            right: 110px;
+            bottom: 50px;
+        }
+
+        #back_adhar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="right_side">
+        <div class="adhar_card">
+            <div class="top adhar">
+                <img src="https://i.pinimg.com/originals/60/91/c0/6091c03ab6c43225116d4e824d427df9.png" id="logo" alt="Logo">
+                <div class="adhar_details">
+                    <div class="adhar_photo">
+                        <img src="./images/samiul.jpg" alt="Photo" id="show_img">
+                    </div>
+                    <div class="adhar_name">
+                        <p id="name_show">Samiul Islam</p>
+                        <p id="father_name_show">Father: Abu Kalam</p>
+                        <p id="dob_show">DOB: 2/12/2002</p>
+                        <p id="gender_show">Male</p>
+                        <h2 id="adhar_id_show">123456789123</h2>
+                    </div>
+                    <div class="adhar_scan">
+                        <img src="./images/adhar scan.png" alt="Scan">
+                    </div>
+                </div>
+                <img src="./images/adhar front bottom.png" id="adhar_front_bottom" alt="Bottom">
+            </div>
+            <div class="bottom adhar">
+                <img src="./images/adharcard png.png" alt="Card">
+                <div class="adhar_back_side_details">
+                    <div class="adhar_b_left">
+                        <p id="state_show">State: West Bengal</p>
+                        <p id="distid_show">District: Malda</p>
+                        <p id="address_show">Address: Manikchak, Ugritola</p>
+                        <p id="post_show">Post: Manikchak</p>
+                        <h2 id="back_id_show">123456789789</h2>
+                    </div>
+                    <div class="adhar_b_right">
+                        <p id="pincode_show">Pin: 732202</p>
+                        <p id="number_show">Number: 123456789564</p>
+                    </div>
+                </div>
+                <img src="./images/adhar back sidr.jpg" id="back_adhar" alt="Back">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

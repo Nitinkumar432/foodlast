@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Burger List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Header content -->
+  </header>
+  
+  <h1 class="m1">Burger King</h1>
+  <h3 style="font-family:Helvetica;font-size:150%; margin-top: 0%;">Deals of the Day</h3>
+  
+  <img class="of" src="https://04y3u0kr23.execute-api.ap-south-1.amazonaws.com/dev/png/1522/MENU-32-1-4000x500__8__jpg" >
+  
+  <hr>
+  
+  <main>
+    <section class="menu">
+      <div class="item">
+        <img src="http://www.pngmart.com/files/5/Hamburger-PNG-Image.png" alt="Turkey Burger">
+        <u><h3>Turkey Burger</h3></u> 
+        <span align="center" style="font-size:150%;">Price: 160</span>
+        <p>Deluxe Patty, Onions, Tomatoes</p>
+        <span align="left">Choose Quantity</span>
+        <select id="quantity">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select> 
+        <br>
+        <button class="button" onclick="addToCart('Turkey Burger', 160)">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function addToCart(itemName, itemPrice) {
+      var quantity = document.getElementById("quantity").value;
+      var totalPrice = itemPrice * quantity;
+
+      // Send the cart item details to the server-side for further processing
+      // You can use AJAX or fetch API to send a request to your server and handle cart logic there
+      // Example: fetch('/add-to-cart', {
+      //            method: 'POST',
+      //            body: JSON.stringify({ itemName, quantity, totalPrice }),
+      //            headers: { 'Content-Type': 'application/json' }
+      //          }).then(handleResponse);
+
+      // For demonstration purposes, display a notification with the cart details
+      var notification = document.createElement("div");
+      notification.innerHTML = "Item added to cart: " + itemName + " (Quantity: " + quantity + ", Total Price: $" + totalPrice + ")";
+      notification.classList.add("notification");
+
+      // Append the notification to the document body
+      document.body.appendChild(notification);
+
+      // Automatically remove the notification after a certain duration (e.g., 3 seconds)
+      setTimeout(function() {
+        document.body.removeChild(notification);
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

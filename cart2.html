@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<style>
+    /*main header*/
+
+
+
+
+
+
+
+
+</style>
+<body>
+    <header>
+        <div class="logo">
+          <a href="http://127.0.0.1:5502/mainpure.html">
+            <img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="The NVR Bistro">
+            
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="http://127.0.0.1:5502/mainpure.html">Home</a></li>
+            <li><a href="http://127.0.0.1:5502/menu.html">Our Menu</a></li>
+            <li><a href="http://127.0.0.1:5502/Offer.html">Deals</a></li>
+            <li><a href="http://127.0.0.1:5502/order.html">Order</a></li>
+            <li><a href="http://127.0.0.1:5502/contact.html">Contact</a></li>
+            <li><a href="http://127.0.0.1:5502/about%20us.html">About Us</a></li>
+            
+         <!-- <a href=" http://127.0.0.1:5500/detectlocation.html"><button class="detect-location-btn"><i class="fas fa-map-marker-alt"></i> Detect my location<img class="lr" src="https://icon-library.com/images/current-location-icon/current-location-icon-17.jpg"></button></a>  -->
+         <a href="http://127.0.0.1:5502/detectlocation.html" class="detect-location-link">
+          <button class="detect-location-btn">
+            <b class="fas fa-map-marker-alt">LOCATE ME<img class="location-img" src="https://www.burgerking.in/static/media/detect-location.054d5431.svg"></b>
+          </button>
+        </a>
+        
+        </ul>
+        </nav>
+        <div class="location-container">
+          
+          
+        
+          <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <a href ="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="Cart"></a>
+          
+            <a href="http://127.0.0.1:5502/login%20page%202.html"><img class="id" src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+           
+            
+            <!-- <span>Find a Burger King near you</span> -->
+          </div>
+        </div>
+        <div class="search-container">
+          <form>
+            <input type="text" placeholder="Search">
+            <button type="submit"><i class="fas fa-search"></i></button>
+    
+          </form>
+        </div>
+      </header>
+    <div class="cart-container">
+        <div class="cart-header">
+       
+          <h1>Your Cart</h1>
+          <hr>
+        </div>
+        <div class="cart-item">
+          <img src="https://media-cdn.tripadvisor.com/media/photo-s/11/cf/b9/a3/dum-gosht-biryani.jpg" alt="Item 2">
+          <div class="item-details">
+            <h3>Subz-E-Biryani</h3>
+            <div class="quantity">
+              <button class="quantity-btn" onclick="decreaseQuantity(2)">-</button>
+              <span id="quantity-2">1</span>
+              <button class="quantity-btn" onclick="increaseQuantity(2)">+</button>
+              <button class="remove-btn" onclick="removeItem(1)">Remove</button>
+            </div>
+            <p class="price">Price of 1: &#8377;250</p>
+          </div>
+          <div class="item-total">
+            <p class="total-price">&#8377;250.00</p>
+          </div>
+
+        </div>
+        <div class="cart-items">
+          <div class="cart-item">
+            <img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg" alt="Item 1">
+            <div class="item-details">
+              <h3>Cheese Burger</h3>
+              <div class="quantity">
+                <button class="quantity-btn" onclick="decreaseQuantity(1)">-</button>
+                <span id="quantity-1">1</span>
+                <button class="quantity-btn" onclick="increaseQuantity(1)">+</button>
+                <button class="remove-btn" onclick="removeItem(1)">Remove</button>
+              </div>
+              <p class="price">Price of 1: &#8377;120.00</p>
+            </div>
+            <div class="item-total">
+              <p class="total-price">&#8377;120.00</p>
+            </div>
+
+          </div>
+          <div class="cart-item">
+            <img src="https://us2guntur.com/images//10024img/peppypaneer_B_260216.jpg" alt="Item 2">
+            <div class="item-details">
+              <h3>Peppy Paneer</h3>
+              <div class="quantity">
+                <button class="quantity-btn" onclick="decreaseQuantity(2)">-</button>
+                <span id="quantity-2">1</span>
+                <button class="quantity-btn" onclick="increaseQuantity(2)">+</button>
+                <button class="remove-btn" onclick="removeItem(1)">Remove</button>
+              </div>
+              <p class="price">Price of 1: &#8377;290</p>
+            </div>
+            <div class="item-total">
+              <p class="total-price">&#8377;290.00</p>
+            </div>
+
+          </div>
+          <div class="cart-item">
+            <img src="https://www.jocooks.com/wp-content/uploads/2020/08/ground-beef-tacos-1-11.jpg" alt="Item 3">
+            <div class="item-details">
+              <h3>Opening Pair Bundle</h3>
+              <div class="quantity">
+                <button class="quantity-btn" onclick="decreaseQuantity(2)">-</button>
+                <span id="quantity-2">1</span>
+                <button class="quantity-btn" onclick="increaseQuantity(2)">+</button>
+                <button class="remove-btn" onclick="removeItem(1)">Remove</button>
+              </div>
+              <p class="price">Price of 1: &#8377;270</p>
+            </div>
+            <div class="item-total">
+              <p class="total-price">&#8377;270.00</p>
+            </div>
+
+          </div>
+          
+        </div>
+        <div class="cart-footer">
+            <div class="offers">
+                <p>Additional offers:</p>
+                <ul>
+                  <li style="color:#eb6709">Add &#8377;500 worth of items and get 10% discount</li>
+                  <li style="color:#eb6709">pay using paytm anf get upto 100&#8377 instant cashback</li>
+                </ul>
+              </div>
+          
+          
+         
+          <br>
+          <div class="discount">
+            <p style="color: #45a049;">Discount: <span id="discount">&#8377;100</span></p>
+          </div>
+          <div class="subtotal">
+            <p style="font-size: 150%;">Subtotal: <span id="subtotal">&#8377;930</span></p>
+          </div>
+          
+          
+        </div>
+        <a href="http://127.0.0.1:5502/addrsss2.html" ><button id="next-button" onclick="nextProcess()">Checkout</button></a>
+      </div>
+      <!-- <div id="side-offer">
+        <img src="https://pizzaonline.dominos.co.in/static/assets/empty_cart.png" alt="Side Offer">
+      </div> -->
+      
+      <script>
+        function increaseQuantity(itemId) {
+  const quantityElement = document.getElementById(`quantity-${itemId}`);
+  const quantity = parseInt(quantityElement.innerText);
+  quantityElement.innerText = quantity + 1;
+
+  updateItemTotal(itemId);
+  calculateSubtotal();
+  applyDiscount();
+}
+
+function decreaseQuantity(itemId) {
+  const quantityElement = document.getElementById(`quantity-${itemId}`);
+  const quantity = parseInt(quantityElement.innerText);
+
+  if (quantity > 1) {
+    quantityElement.innerText = quantity - 1;
+    updateItemTotal(itemId);
+    calculateSubtotal();
+    applyDiscount();
+  }
+}
+
+function increaseQuantity(itemId) {
+  const quantityElement = document.getElementById(`quantity-${itemId}`);
+  const quantity = parseInt(quantityElement.innerText);
+  quantityElement.innerText = quantity + 1;
+
+  updateItemTotal(itemId);
+  calculateSubtotal();
+  applyDiscount();
+}
+
+function decreaseQuantity(itemId) {
+  const quantityElement = document.getElementById(`quantity-${itemId}`);
+  const quantity = parseInt(quantityElement.innerText);
+
+  if (quantity > 1) {
+    quantityElement.innerText = quantity - 1;
+    updateItemTotal(itemId);
+    calculateSubtotal();
+    applyDiscount();
+  }
+}
+
+function updateItemTotal(itemId) {
+  const quantityElement = document.getElementById(`quantity-${itemId}`);
+  const quantity = parseInt(quantityElement.innerText);
+
+  const priceElement = document.querySelector(`.cart-item:nth-child(${itemId}) .price`);
+  const price = parseFloat(priceElement.innerText.replace('Price of 1: ₹', ''));
+
+  const itemTotalElement = document.querySelector(`.cart-item:nth-child(${itemId}) .total-price`);
+  itemTotalElement.innerText = `₹${(quantity * price).toFixed(2)}`;
+}
+
+function calculateSubtotal() {
+  const itemTotalElements = document.querySelectorAll('.total-price');
+  let subtotal = 0;
+
+  itemTotalElements.forEach((itemTotalElement) => {
+    const price = parseFloat(itemTotalElement.innerText.replace('₹', ''));
+    subtotal += price;
+  });
+
+  const subtotalElement = document.getElementById('subtotal');
+  subtotalElement.innerText = `₹${subtotal.toFixed(2)}`;
+}
+
+function applyDiscount() {
+  const subtotalElement = document.getElementById('subtotal');
+  const subtotal = parseFloat(subtotalElement.innerText.replace('₹', ''));
+
+  const discountElement = document.getElementById('discount');
+  let discount = 0;
+
+  if (subtotal >= 500) {
+    discount = subtotal * 0.1;
+  }
+
+  discountElement.innerText = `₹${discount.toFixed(2)}`;
+}
+
+// Initialize item totals, subtotal, and discount on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const itemTotalElements = document.querySelectorAll('.total-price');
+  itemTotalElements.forEach((itemTotalElement) => {
+    const price = parseFloat(itemTotalElement.innerText.replace('₹', ''));
+    const quantity = parseInt(itemTotalElement.parentElement.querySelector('.quantity span').innerText);
+    itemTotalElement.innerText = `₹${(quantity * price).toFixed(2)}`;
+  });
+
+  calculateSubtotal();
+  applyDiscount();
+});
+
+function removeItem(itemId) {
+  const cartItem = document.querySelector(`.cart-item:nth-child(${itemId})`);
+  cartItem.remove();
+
+  calculateSubtotal();
+  applyDiscount();
+}
+
+
+
+
+
+      </script>
+      
+
+    
+</body>
+</html>

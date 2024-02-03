@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Confirmation</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+		}
+		.confirmation {
+			background-color: #fff;
+			color: #333;
+			padding: 40px;
+			margin: 20px auto;
+			max-width: 500px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			text-align: center;
+			font-family: Arial, sans-serif;
+			line-height: 1.6;
+		}
+		h2 {
+			font-size: 36px;
+			margin-bottom: 10px;
+			color: #4CAF50;
+			text-transform: uppercase;
+		}
+		p {
+			font-size: 18px;
+			margin-bottom: 20px;
+			color: #666;
+		}
+		.confirmation button {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+		}
+		.confirmation button:hover {
+			background-color: #3e8e41;
+		}
+		@media only screen and (max-width: 500px) {
+			.confirmation {
+				padding: 20px;
+			}
+			h2 {
+				font-size: 24px;
+			}
+			p {
+				font-size: 16px;
+			}
+			.confirmation button {
+				padding: 8px 16px;
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="confirmation">
+		<h2>Thank you for your payment!</h2>
+		<p>Your payment has been successfully processed.</p>
+        <p>we will shortly Delivered your Order</p>
+		<p>Confirmation Number: 1234567890</p>
+		<a href="http://127.0.0.1:5502/mainpure.html"><button>Continue Shopping</button></a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<STYLE>
+	
+	.header {
+		display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+	
+			
+
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+		}
+
+		.container {
+			max-width: 1500px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			padding: 20px;
+		}
+
+		.logo {
+			font-size: 25px;
+			font-weight: bold;
+			color: #021622;
+			margin-bottom: 20px;
+			margin-right:120px;
+		}
+
+		.address-section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-right: 20px;
+		}
+
+		.address-selector {
+			margin-bottom: 10px;
+			font-size: 14px;
+			color: #666;
+		}
+
+		.add-address {
+			color: #f6f4f2;
+			text-decoration: none;
+			margin-bottom: 20px;
+		}
+
+		.order-section {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			flex-grow: 1;
+		}
+
+		.order-summary {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background-color: #f5f5f5;
+			padding: 10px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		.order-img {
+			width: 100px;
+			height: 80px;
+			margin-right: 10px;
+			object-fit: cover;
+  border-radius: 10px;
+			
+		}
+
+		.order-details {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.order-name {
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+			margin-bottom: 10px;
+		}
+
+		.order-price {
+			font-size: 16px;
+			color: #666;
+		}
+
+		.total-payable {
+			font-size: 20px;
+			font-weight: bold;
+			color: #333;
+			margin-top: auto;
+			align-self: center;
+		}
+
+		.order-btn {
+			background-color: #00b1ff;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 400px;
+			align-self: center;
+            margin-left: 200px;
+		}
+        .order-btn:hover {
+            background-color: #047ebb;
+            /* border-style: double; */
+        }
+
+		.order-summary-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background-color: #f5f5f5;
+			padding: 20px;
+			border-radius: 5px;
+			flex-grow: 1;
+			max-width: 50%;
+			margin-left: 20px;
+		}
+
+		.order-summary-box {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+		.order-item-img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            object-fit: contain;
+        }
+	
+
+	.order-item-details {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.order-item-name {
+		font-size: 16px;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 5px;
+	}
+
+	.order-item-price {
+		font-size: 14px;
+		color: #2e2b2b;
+		size:300px;
+		margin-bottom: 5px;
+		margin-left:600px
+	}
+
+	.total-label {
+		font-size: 18px;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 10px;
+	}
+
+	.total-price {
+		font-size: 20px;
+		font-weight: bold;
+		color: #00b1ff;
+	}
+    .add-btn {
+			background-color: #00b1ff;;
+			
+            font-style: normal;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 20px;
+			align-self: center;
+		}
+	.add-btn:hover{
+		background-color: #78ec12;
+	}
+	/* .Back{
+		background-color: #00b1ff;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			margin-top: 300px;
+			align-self: center;
+            margin-left: 10px;
+
+	} */
+	.Back{
+		background-color: #db3f0c;
+		color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			font-size: 16px;
+			font-weight: bold;
+			
+	
+			margin-top:10px;
+	}
+	.Back:hover{
+		background-color: #ff4305;
+	}
+	.order-img img,
+        .order-item-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+		.qn{
+			margin-left:300px;
+			margin-top:20px;
+
+		}
+		
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      background-color: #f2f2f2;
+    }
+    
+    .cart-animation {
+      animation-name: cartAnimation;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    
+    @keyframes cartAnimation {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+
+</body>
+</html>
+
+
+<header>
+    <header >
+		<header class="header">
+			<h1>Place Order</h1>
+			<div class="cart-animation">
+			  <img src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="Cart Icon" width="30" height="30">
+			</div>
+		  </header>
+		
+
+	</header>
+  </header>
+<body>
+    <div class="container">
+		<div class="address-section">
+			<div class="logo">Nitin Patel</div>
+			<div class="address-selector">
+				<label for="address">Current Address:</label>
+                <h5>Chitkara University,Rajpura</h5>
+                <h5>Chandigarh-Patiala National Highway
+                    Punjab 140 401</h5>
+				<!-- <select id="address">
+					<option value="address1">123 Main Street</option>
+					<option value="address2">456 Oak Street</option>
+					<option value="address3">789 Maple Street</option>
+				</select> -->
+			</div>
+			<button class="add-btn"><a href="http://127.0.0.1:5501/address%20order.html" class="add-address">Add a new address</a></button>
+			<a href="http://127.0.0.1:5502/cart2.html"><button class="Back">Back to Cart</button></a>
+		</div>
+		<div class="order-section">
+			<div class="order-summary">
+				<div class="order-img">
+					<img src="https://media-cdn.tripadvisor.com/media/photo-s/11/cf/b9/a3/dum-gosht-biryani.jpg" alt="Order item image">
+				</div>
+				<div class="order-details">
+					<div class="qn"> Qnty : 1</div>
+					<div class="order-name">Subz-E-Biryani</div>
+					<div class="order-price"> &#8377 250</div>
+				</div>
+			</div>
+			
+			<a href="http://127.0.0.1:5502/payment.html"><button class="order-btn">Place Order</button></a>
+		</div>
+		<div class="order-summary-container">
+			<div class="order-summary-box">
+				<div class="order-item-img">
+					<img src="https://media-cdn.tripadvisor.com/media/photo-s/11/cf/b9/a3/dum-gosht-biryani.jpg" alt="Order item image">
+				</div>
+				<div class="order-item-details">
+					<div class="qn"> Qnty : 1</div>
+					<div class="order-item-name">Subz-E-Biryani</div>
+					<div class="order-item-price">&#8377 250</div>
+				</div>
+			</div>
+			<div class="order-summary-box">
+				<div class="order-item-img">
+					<img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg" alt="Order item image">
+				</div>
+				<div class="order-item-details">
+					<div class="qn"> Qnty : 1</div>
+					<div class="order-item-name">Cheese Burger</div>
+					<div class="order-item-price">&#8377 120</div>
+				</div>
+			</div>
+            <div class="order-summary-box">
+				<div class="order-item-img">
+					<img src="https://us2guntur.com/images//10024img/peppypaneer_B_260216.jpg" alt="Order item image">
+				</div>
+				<div class="order-item-details">
+					<div class="qn"> Qnty : 1</div>
+					<div class="order-item-name">Peppey panner pizza</div>
+					<div class="order-item-price">&#8377 290</div>
+				</div>
+			</div>
+            <div class="order-summary-box">
+				<div class="order-item-img">
+					<img src="https://www.jocooks.com/wp-content/uploads/2020/08/ground-beef-tacos-1-11.jpg" alt="Order item image">
+				</div>
+				<div class="order-item-details">
+					<div class="qn"> Qnty : 1</div>
+					<div class="order-item-name">Opening Pair Bundle</div>
+					<div class="order-item-price">&#8377 270</div>
+				</div>
+			</div>
+            <div class="order-summary-box">
+				<!-- <div class="order-item-img">
+					<img src="https://via.placeholder.com/60x60" alt="Order item image">
+				</div> -->
+				<!-- <div class="order-item-details">
+					<div class="order-item-name">Biryani</div>
+					<div class="order-item-price">$5.99</div>
+				</div> -->
+			</div>
+			<div class="total-label">Total Payable:</div><div class="total-price">&#8377 930</div>
+			
+		</div>
+	</div>
+</body>
+</html>
+    
+</body>
+</html>

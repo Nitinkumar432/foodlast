@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food </title>
+</head>
+<style>
+ body {
+            background-color: rgb(245, 235, 220);
+            background-position-x: 100%;
+        }
+
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-left:10px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+}
+
+.menu-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 40px;
+  box-sizing: border-box;
+}
+
+ .menu-nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+} 
+
+.menu-nav li {
+  margin-right: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-nav a:hover {
+  color: #666;
+}
+
+.menu-items {
+  margin-top: 40px;
+  
+}
+
+.item {
+  width: 32%;
+  float: left;
+  text-align: center;
+   box-sizing: border-box;
+  padding: 20px;
+ 
+}
+
+
+.item img {
+   max-width: 100%;
+  max-height:200px;
+  width:fit-content;
+}
+
+ .view-all-btn {
+  display: block;
+  margin-top: 10px;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.view-all-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+.h1{
+  font-family: Impact;
+  font-size: 250%;
+  color:#ff8c00;
+
+}
+        body {
+            background-color: rgb(245, 235, 220);
+            background-position-x: 100%;
+        }
+
+        /* ... Rest of your CSS styles ... */
+
+        .menu-items {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item img {
+            max-width: 100%;
+            max-height: 200px;
+            width: fit-content;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .item:hover img {
+            transform: scale(1.1);
+        }
+
+        .slideshow {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slideshow-container {
+            display: flex;
+            animation: slide 8s infinite;
+        }
+
+        .slideshow-item {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            20% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-100%);
+            }
+            45% {
+                transform: translateX(-100%);
+            }
+            50% {
+                transform: translateX(-200%);
+            }
+            70% {
+                transform: translateX(-200%);
+            }
+            75% {
+                transform: translateX(-300%);
+            }
+            95% {
+                transform: translateX(-300%);
+            }
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+        .ads {
+            position: absolute;
+            top: 250px;
+            right: 10px;
+            width: 200px;
+            height: 300px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Example ad styling */
+        .ads img {
+            max-width: 100%;
+            height: 130%;
+            border-radius: 10px;
+        }
+
+
+</style>
+<header>
+  <div class="logo">
+    <a href="#">
+      <A href="http://127.0.0.1:5500/burgerlist.html"><img src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="Burger King logo"></A>
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="http://127.0.0.1:5502/mainpure.html">Home</a></li>
+      <li><a href="http://127.0.0.1:5502/menu.html">Our Menu</a></li>
+      <li><a href="http://127.0.0.1:5502/Offer.html">Deals</a></li>
+      <li><a href="#">Offer</a></li>
+      <li><a href="#">Cart</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+  </nav>
+  <div class="location-container">
+    <div class="location">
+      <i class="fas fa-map-marker-alt"></i>
+    
+      <a href="http://127.0.0.1:5500/login%20page%202.html"><img src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a>
+      <!-- <span>Find a Burger King near you</span> -->
+    </div>
+  </div>
+  <div class="search-container">
+    <form>
+      <input type="text" placeholder="Search">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+  </header>
+<body>
+   <div class="ads">
+   <a href='http://127.0.0.1:5502/burgerlist.html' ><img src="https://i.pinimg.com/originals/31/1c/cb/311ccb9e59952a8e37f189414e87ba48.gif" alt="Ad 1"></a>
+</div> 
+    <section class="menu-section">
+        <div class="menu-nav">
+          <ul>
+            <li ><a href="http://127.0.0.1:5502/pizzalist.html">Pizza</a></li>
+            <li><a href="http://127.0.0.1:5502/burgerlist.html">Burger</a></li>
+            <li><a href="http://127.0.0.1:5502/Tacos.html">Tacos</a></li>
+            <li><a href="http://127.0.0.1:5502/chicken.html">chicken</a></li>
+            <li><a href="http://127.0.0.1:5502/Biryani.html">Biryani</a></li>
+            <li><a href="http://127.0.0.1:5502/Noodles.html">Noodles</a></li>
+            <li><a href="http://127.0.0.1:5502/Cake.html">Cake</a></li>
+            <li><a href="http://127.0.0.1:5502/Paneer.html">Paneer</a></li>
+            <!-- <li><a href="#tacos">Tacos</a></li>
+            <li><a href="#pizza">Pizza</a></li>
+            <li><a href="#burger">Burger</a></li>
+            <li><a href="#tacos">Tacos</a></li> -->
+          </ul>
+        </div>
+        <hr>
+      
+        <div class="menu-items">
+          <div class="item">
+            <a href="http://127.0.0.1:5502/pizzalist.html"><img src="https://images7.alphacoders.com/596/596343.jpg" alt="Pizza"></a>
+
+        
+            <a href="http://127.0.0.1:5502/pizzalist.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/burgerlist.html"><img src="https://images5.alphacoders.com/102/1028508.jpg" alt="Burger"></a>
+            <a href="http://127.0.0.1:5502/burgerlist.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/Tacos.html"><img src="https://www.samtell.com/hubfs/Blogs/Four-Scrumptous-Tacos-Lined-up-with-ingredients-around-them-1.jpg#keepProtocol" alt="Tacos"></a>
+            <a href="http://127.0.0.1:5502/Tacos.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/chicken.html"><img src="http://conorbofin.files.wordpress.com/2012/10/red-cooked-chicken-5-of-7.jpg" alt="Chicken"></a>
+            <a href="http://127.0.0.1:5502/chicken.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/Biryani.html"><img src="https://i.pinimg.com/originals/e0/d4/99/e0d4993c60443186f23ea9e32a1dd082.jpg" alt="Biryani"></a>
+            <a href="http://127.0.0.1:5502/Biryani.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/Paneer.html"><img src="https://tse4.mm.bing.net/th?id=OIP.GN0I353wsuP4YYs6vyuuywHaFj&pid=Api&P=0" alt="Paneer"></a>
+            <a href="http://127.0.0.1:5502/Paneer.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/Cake.html"><img src="https://i.pinimg.com/originals/2f/40/40/2f40406ee88a54fc7108f2f0a5d3cccc.jpg" alt="Cake"></a>
+            <a href="http://127.0.0.1:5502/Cake.html" class="view-all-btn">View All</a>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5502/Noodles.html"><img src="https://tse2.mm.bing.net/th?id=OIP.gReJgmlg1_804h-5Fmpk1AHaE8&pid=Api&P=0" alt="Noodles"></a>
+            <a href="http://127.0.0.1:5502/Noodles.html" class="view-all-btn">View All</a>
+          </div>
+        </div>
+        
+
+      </section>
+      
+      
+    
+</body>
+</html>

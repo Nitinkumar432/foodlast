@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .location-container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+}
+
+.location-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.location-form {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.location-form input[type="text"] {
+  flex: 1;
+  font-size: 18px;
+  border: none;
+  outline: none;
+}
+
+.location-form button[type="submit"] {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.location-form button[type="submit"] i {
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.detect-location-btn {
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.detect-location-btn i {
+  margin-right: 10px;
+}
+
+</style>
+<body>
+    <div class="location-container">
+        <h2>Find the best restaurants near you</h2>
+        <form class="location-form">
+          <input type="text" placeholder="Enter your location...">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+        <p>or</p>
+        <button class="detect-location-btn"><i class="fas fa-map-marker-alt"></i> Detect my location</button>
+      </div>
+      
+    
+</body>
+</html>

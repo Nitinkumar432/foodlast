@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="mainpuretesting.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LittleLouge</title> 
+</head>
+
+<header>  
+    <div class="logo">
+      <a href="http://127.0.0.1:5502/mainpure.html">
+        <img src="photo2.png" alt="The NVR Bistro">
+        
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="http://127.0.0.1:5502/mainpure.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5502/menu.html">Our Menu</a></li>
+        <li><a href="http://127.0.0.1:5502/Offer.html">Deals</a></li>
+        <li><a href="http://127.0.0.1:5502/order.html">Order</a></li>
+        <li><a href="http://127.0.0.1:5502/contact.html">Contact</a></li>
+        <li><a href="http://127.0.0.1:5502/about%20us.html">About Us</a></li>
+        
+     <!-- <a href=" http://127.0.0.1:5500/detectlocation.html"><button class="detect-location-btn"><i class="fas fa-map-marker-alt"></i> Detect my location<img class="lr" src="https://icon-library.com/images/current-location-icon/current-location-icon-17.jpg"></button></a>  -->
+     <a href="http://127.0.0.1:5502/detectlocation.html" class="detect-location-link">
+      <button class="detect-location-btn">
+        <b class="fas fa-map-marker-alt">LOCATE ME<img class="location-img" src="https://pizzaonline.dominos.co.in/static/assets/icons/auto_detect.png"></b>
+      </button>
+    </a>
+    
+    </ul>
+    </nav>
+    <!-- <div class="site-header"> -->
+
+  </div>
+
+  <!-- <div class="search-containers">
+   
+    <input type="text" class="search-inputs" placeholder="Search for delicious recipes...">
+    <img src="https://uxwing.com/wp-content/themes/uxwing/download/user-interface/search-icon.png" alt="Search Logo" class="site-logos">
+</div> -->
+
+    
+      
+      
+    
+      <!-- <div class="location"> -->
+        <!-- <i class="fas fa-map-marker-alt"></i> -->
+        <!-- <a href ="http://127.0.0.1:5502/cart2.html"><img class="cart " src="https://www.bk.com/static/media/7ba95726ef76f181e658ceb137277d2a9be17db2-26x24.0495a4ebf035594acdf1.png" alt="Cart"></a>
+        <a href ="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.bk.com/static/media/ca61127dd95f2e6473303320dba757fa9c1d45e1-24x24.4371e92a85182b7310f4.png" alt="Cart"></a> -->
+        <!-- <a href ="http://127.0.0.1:5502/cart2.html"><img class="cart " src="https://www.bk.com/static/media/7ba95726ef76f181e658ceb137277d2a9be17db2-26x24.0495a4ebf035594acdf1.png" alt="Cart"></a>
+        <a href ="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.bk.com/static/media/ca61127dd95f2e6473303320dba757fa9c1d45e1-24x24.4371e92a85182b7310f4.png" alt="Cart"></a> -->
+        
+        <!-- <a href="http://127.0.0.1:5502/login%20page%202.html"><img class="cart2" src="https://production-mds-assets.s3.ap-south-1.amazonaws.com/icons/account.svg"></a> -->
+       
+       
+      
+        
+        <a href ="http://127.0.0.1:5502/cart2.html"><img class="cart" src="https://www.burgerking.in/static/media/cart.3ff203fa.svg" alt="Cart"></a>
+      
+        <a href ="http://127.0.0.1:5502/login%20page%202.html"><img class="cart2" src="https://www.burgerking.in/static/media/login-inactive.de941b20.svg" alt="Cart"></a>
+        
+        <!-- <span>Find a Burger King near you</span> -->
+      </div>
+    </div>
+    
+    <!-- <div class="search-container">
+      <form>
+        <input type="text" placeholder="Search">
+        <button type="submit"><i class="fas fa-search"></i></button>
+
+      </form>
+    </div> -->
+  </header>
+
+  
+  <div class="popup-overlay" id="popup">
+    <div class="popup">
+      <span class="close-icon">&times;</span>
+      <img class="logo" src="https://i.pinimg.com/originals/33/bf/d6/33bfd6d89a289ec7d37f06cd90b79109.png" alt="Logo">
+      <h2>Login with Number</h2>
+      <form>
+        <input type="text" placeholder="Name" required>
+        <input type="text" placeholder="Phone Number" required>
+        <button type="submit" class="login-button">Login</button>
+      </form>
+      <p class="signup-option">Don't have an account? <a href="#">Sign up</a></p>
+      <div class="offer">
+        <h3>Special Offer</h3>
+        <p class="hr">Get 20% off on your first purchase!</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+      }, 10000);
+    });
+
+    // Add event listener for closing the pop-up
+    var closeIcon = document.querySelector(".close-icon");
+    closeIcon.addEventListener("click", function() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
+    });
+  </script>
+  
+<body>
+  
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230224120508235821_1440x300gif">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20221223091239146125_1440x300gif">
+    </div>
+    <div class="mySlides fade">
+      <img src="https://d1rgpf387mknul.cloudfront.net/products/Home/web/1x_web_20230414091232664542_1440x300gif">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  
+  
+
+  <!-- Rest of your website content -->
+  <div class="main-content">
+    <!-- Your other content goes here -->
+  </div>
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slides[slideIndex - 1].style.display = "block";
+        }
+    
+        var intervalTime = 3000;
+        setInterval(function() {
+          plusSlides(1);
+        }, intervalTime);
+      </script>
+      
+      
+    <!-- <span>
+        <a href="http://127.0.0.1:5500/burgerlist.html"><img class="hry" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/4a610731056459.563f7852ef3a0.jpg" ></span></a>
+    <span><img class="item,yu" src="https://cdn0.iconfinder.com/data/icons/map-and-navigation-15/66/87-512.png" width="100" align="right"></span> 
+c:\Users\NITIN\c code\.vscode\CSS      <a href="http://127.0.0.1:5500/pizzalist.html"><img  class ='u' src="https://scontent.fdel1-5.fna.fbcdn.net/v/t39.30808-6/336745657_170521388752594_3430635874454997420_n.jpg?stp=dst-jpg_p843x403&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=evaD3UE5-rUAX8anjPf&_nc_oc=AQluOLbC4ukfF2fGJEw_ziiNRCVY4g1oQ7w7KueZpJJZLn8LIc35bd06Ruw6o8LP1u8&_nc_ht=scontent.fdel1-5.fna&oh=00_AfDos-TMmxHWI-l1aYIp-aQkryrYLhOZjQvXNJ5JD863Cw&oe=6444792C" width="690" height="450"></a>
+    </span> -->
+      <hr>
+      <H2 class="deal">Deals of the day:</H2>
+      <a href="http://127.0.0.1:5502/burgerlist.html"><img  class="kimg"  src="https://d1rgpf387mknul.cloudfront.net/16587461961x1119x540jpg"></a>
+      <a href="http://127.0.0.1:5502/pizzalist.html"><img class="kimg"  src="https://api.dominos.co.in/prod-olo-api/images/flashBanner/dominos_adaptation_desktop.jpg"></a>
+      <!-- <a href="http://127.0.0.1:5502/pizzalist.html"><img class="kimg"  src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/4509f92e460ee2574c7f0934aeaa336c20c542b1-2000x1000.png?w=812&q=80&fit=max&auto=format"></a> -->
+      <a href="http://127.0.0.1:5502/pizzalist.html"><img class="kimg"  src="https://cdn.sanity.io/images/czqk28jt/prod_bk_us/6a310ad705fe9844a40414aac2d7ccc92f8c7a1d-2000x1000.png?w=812&q=80&fit=max&auto=format"></a>
+      <form >
+        
+       
+      </form>
+      <body>
+        <br>
+    
+        <div class="slider-container">
+          
+          <br>
+          <span style="font-size:180%;font-family:Arial, Helvetica, sans-serif">Just Like a Wow</span>
+          <br>
+          <button class="slider-arrow slider-arrow-left">&#8249;</button>
+          <div class="slider">
+            
+            <a href="http://127.0.0.1:5502/Noodles.html"><img src="https://img.freepik.com/free-photo/mixed-pizza-with-various-ingridients_140725-3790.jpg?w=2000" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/burgerlist.html"><img src="https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/Noodles.html"><img src="https://www.masalabox.com/wp-content/uploads/2022/03/e1dad5315972c8a9db86fb01d69c7ecb.jpg" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/chicken.html"><img src="http://getwallpapers.com/wallpaper/full/0/3/a/904705-meat-wallpapers-2880x1800-macbook.jpg" alt="Food Item"></a>
+            <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Garlic-Noodles-Thumbnail-1024x1024.jpg" alt="Food Item">
+            <img src="https://preview.redd.it/u4h942nttrm31.jpg?auto=webp&s=01ee240b81869671d0903ff20dfc081a78a88a7d" alt="Food Item">
+            <img src="https://images8.alphacoders.com/871/871911.jpg" alt="Food Item">
+            <img src="https://wallpaperaccess.com/full/4622468.jpg" alt="Food Item">
+            <img src="https://img.freepik.com/free-photo/mixed-pizza-with-various-ingridients_140725-3790.jpg?w=2000" alt="Food Item">
+            <a href="http://127.0.0.1:5502/burgerlist.html"><img src="https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/Tacos.html"><img src="https://www.samtell.com/hubfs/Blogs/Four-Scrumptous-Tacos-Lined-up-with-ingredients-around-them-1.jpg#keepProtocol" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/chicken.html"><img src="http://getwallpapers.com/wallpaper/full/0/3/a/904705-meat-wallpapers-2880x1800-macbook.jpg" alt="Food Item"></a>
+            <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Garlic-Noodles-Thumbnail-1024x1024.jpg" alt="Food Item">
+            <img src="https://www.masalabox.com/wp-content/uploads/2022/03/e1dad5315972c8a9db86fb01d69c7ecb.jpg" alt="Food Item">
+            <img src="https://images8.alphacoders.com/871/871911.jpg" alt="Food Item">
+            <img src="https://wallpaperaccess.com/full/4622468.jpg" alt="Food Item">
+            <img src="https://img.freepik.com/free-photo/mixed-pizza-with-various-ingridients_140725-3790.jpg?w=2000" alt="Food Item">
+            <a href="http://127.0.0.1:5502/burgerlist.html"><img src="https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/Tacos.html"><img src="https://www.samtell.com/hubfs/Blogs/Four-Scrumptous-Tacos-Lined-up-with-ingredients-around-them-1.jpg#keepProtocol" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/chicken.html"><img src="http://getwallpapers.com/wallpaper/full/0/3/a/904705-meat-wallpapers-2880x1800-macbook.jpg" alt="Food Item"></a>
+            <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Garlic-Noodles-Thumbnail-1024x1024.jpg" alt="Food Item">
+            <img src="https://www.masalabox.com/wp-content/uploads/2022/03/e1dad5315972c8a9db86fb01d69c7ecb.jpg" alt="Food Item">
+            <img src="https://images8.alphacoders.com/871/871911.jpg" alt="Food Item">
+            <img src="https://wallpaperaccess.com/full/4622468.jpg" alt="Food Item">
+            <img src="https://img.freepik.com/free-photo/mixed-pizza-with-various-ingridients_140725-3790.jpg?w=2000" alt="Food Item">
+            <a href="http://127.0.0.1:5502/burgerlist.html"><img src="https://media.istockphoto.com/id/1188412964/photo/hamburger-with-cheese-and-french-fries.jpg?s=612x612&w=0&k=20&c=lmJ0qUjC3FtCrWOGU0hWvqBgXcKZ1imiXKOMuHRfFH8=" alt="Food Item"></a>
+           <a href="http://127.0.0.1:5502/Tacos.html"><img src="https://www.samtell.com/hubfs/Blogs/Four-Scrumptous-Tacos-Lined-up-with-ingredients-around-them-1.jpg#keepProtocol" alt="Food Item"></a>
+            <a href="http://127.0.0.1:5502/chicken.html"><img src="http://getwallpapers.com/wallpaper/full/0/3/a/904705-meat-wallpapers-2880x1800-macbook.jpg" alt="Food Item"></a>
+            <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/09/Garlic-Noodles-Thumbnail-1024x1024.jpg" alt="Food Item">
+            <img src="https://www.masalabox.com/wp-content/uploads/2022/03/e1dad5315972c8a9db86fb01d69c7ecb.jpg" alt="Food Item">
+            <img src="https://images8.alphacoders.com/871/871911.jpg" alt="Food Item">
+            <a href="http://127.0.0.1:5502/Biryani.html"><img src="https://wallpaperaccess.com/full/4622468.jpg" alt="Food Item"></a>
+            <br>
+            <br>
+  
+          </div>
+          <button class="slider-arrow slider-arrow-right">&#8250;</button>
+        </div>
+        
+        
+            
+           
+       
+      <script>
+      const slider = document.querySelector('.slider');
+      const prevButton = document.querySelector('.slider-arrow-left');
+      const nextButton = document.querySelector('.slider-arrow-right');
+      
+      let scrollPos = 0;
+      const slideWidth = slider.scrollWidth / slider.children.length;
+      
+      prevButton.addEventListener('click', () => {
+        scrollPos -= slideWidth;
+        if (scrollPos < 0) {
+          scrollPos = 0;
+        }
+        slider.scrollTo({
+          left: scrollPos,
+          behavior: 'smooth'
+        });
+      });
+      
+      nextButton.addEventListener('click', () => {
+        scrollPos += slideWidth;
+        if (scrollPos > slider.scrollWidth - slider.clientWidth) {
+          scrollPos = slider.scrollWidth - slider.clientWidth;
+        }
+        slider.scrollTo({
+          left: scrollPos,
+          behavior: 'smooth'
+        });
+      });
+      
+      
+      </script>  
+      
+      
+      
+      <hr>
+     
+      <script>
+        function selectOption(option) {
+          const options = document.querySelectorAll('.option');
+          options.forEach((opt) => opt.classList.remove('selected'));
+          const selectedOption = document.querySelector(`.option[data-option="${option}"]`);
+          selectedOption.classList.add('selected');
+        }
+    
+        function applyFilter() {
+          // Implement your filter logic here
+        }
+      </script>
+      
+    
+      
+    
+    
+      <!-- <span style="font-size:120%;font-family:Verdana;">BESTSELLERS</span> -->
+   
+    <nav class="main-nav">
+        <div>
+            <button class="filter-button" onclick="filterFood('all')">All</button>
+            <button class="filter-button" onclick="filterFood('veg')">Veg</button>
+            <button class="filter-button" onclick="filterFood('nonveg')">Non-Veg</button>
+        </div>
+        <div class="search-containerss">
+            <input type="text" class="search-inputss" placeholder="Search">
+            <button class="search-buttonss" onclick="searchFood()">Search</button>
+        </div>
+    </nav>
+    <div class="food-container"></div>
+
+    <script>
+        const foodData = [
+            { name: 'burger', type: 'veg', image: 'https://images3.alphacoders.com/942/942653.jpg', details: 'The only bad burger is the one you didn.t eat.', rating: 4.5, link: 'http://127.0.0.1:5502/burgerlist.html' },
+            { name: 'Pizza', type: 'nonveg', image: 'https://b.zmtcdn.com/data/pictures/chains/9/2400349/edc92b9e7877ea851a3d6f1190d1580f_o2_featured_v2.jpg?output-format=webp', details: 'Life is a combination of magic and pizza.', rating: 4.2, link: 'http://127.0.0.1:5502/pizzalist.html' },
+            { name: 'Tacos', type: 'veg', image: 'https://wallpapercave.com/wp/wp2010794.jpg', details: 'Tacos: Because who needs a boyfriend when you can have tacos.', rating: 4.7, link: 'http://127.0.0.1:5502/Tacos.html' },
+            { name: 'Biryani', type: 'nonveg', image: 'https://b.zmtcdn.com/data/pictures/chains/1/20343651/9d3d82a4f04a1b83e67a4642ecefe8fd_o2_featured_v2.jpg', details: 'Biryani is a hug in a bowl, warming both the heart and the soul', rating: 4.7, link: 'http://127.0.0.1:5502/Biryani.html' },
+            { name: 'Cake', type: 'veg', image: 'https://i.pinimg.com/originals/2f/40/40/2f40406ee88a54fc7108f2f0a5d3cccc.jpg', details: 'Cake is the answer, no matter the question.', rating: 4.5, link: 'http://127.0.0.1:5502/Cake.html' },
+            { name: 'Chicken', type: 'nonveg', image: 'https://images6.alphacoders.com/439/439410.jpg', rating: 4.2, link: 'http://127.0.0.1:5502chicken.html' },
+            { name: 'Noodles', type: 'veg', image: 'https://wallpapercave.com/wp/wp2393879.jpg', rating: 4.7,details: 'Noodles are not only amusing but delicious.' ,link: 'http://127.0.0.1:5502/Noodles.html' },
+            { name: 'Panerr', type: 'veg', image: 'https://wallpapercave.com/wp/wp4987425.jpg', rating: 4.7,details: 'Paneer: where simplicity meets deliciousness.', link: 'http://127.0.0.1:5502/Paneer.html' },
+            { name: 'Parantha', type: 'veg', image: 'https://b.zmtcdn.com/data/o2_assets/2b5a5b533473aada22015966f668e30e1633434990.png', rating: 4.5,details: 'Parantha: where simplicity meets deliciousness.',  link: 'http://127.0.0.1:5502/PAYMENT2.HTML' },
+            { name: 'Thali', type: 'nonveg', image: 'https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png', details: 'In every thali, theres a story of culinary craftsmanship.', rating: 4.2, link: 'https://example.com/chicken-burger' },
+            { name: 'Sandwich', type: 'veg', image: 'https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png',details: 'The sandwich is the most adaptable, portable, and satisfying of foods.', rating: 4.7, link: 'http://127.0.0.1:5502/PAYMENT2.HTML' },
+            { name: 'Dosa', type: 'veg', image: 'https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png', details: 'In the world of breakfast, dosa is the undisputed champion.', rating: 4.7, link: 'https://example.com/mediterranean-salad' },
+            { name: 'Shake', type: 'veg', image: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2022/05/chocolate-milkshake.jpg', details: 'Life is better with a shake in hand', rating: 4.7, link: 'https://example.com/mediterranean-salad' }
+        ];
+
+        function renderFood(foodItems = foodData) {
+            const foodContainer = document.querySelector('.food-container');
+            foodContainer.innerHTML = '';
+
+            foodItems.forEach(food => {
+                const foodItem = document.createElement('div');
+                foodItem.className = 'food-item';
+                foodItem.innerHTML = `
+                    <a href="${food.link}" class="food-link">
+                        <img class="food-image" src="${food.image}" alt="${food.name}">
+                        <div class="food-type">${food.type.toUpperCase()}</div>
+                        <div class="food-details">
+                            <h3>${food.name}</h3>
+                            <p>${food.details}</p>
+                        </div>
+                        <div class="food-rating">
+                            <span class="star-icon">⭐</span> ${food.rating}
+                        </div>
+                        <a class="food-link-button" href="${food.link}">View Details</a>
+                    </a>
+                `;
+                foodContainer.appendChild(foodItem);
+            });
+        }
+
+        function filterFood(type) {
+            const filteredFood = type === 'all' ? foodData : foodData.filter(food => food.type === type);
+            renderFood(filteredFood);
+        }
+
+        function searchFood() {
+            const searchInput = document.querySelector('.search-inputss');
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredFood = foodData.filter(food =>
+                food.name.toLowerCase().includes(searchTerm) ||
+                (food.details && food.details.toLowerCase().includes(searchTerm))
+            );
+            renderFood(filteredFood);
+        }
+
+        // Initial rendering
+        renderFood();
+    </script>
+      
+
+     
+        </section>
+        <h1>Popular Restaurents in India </h1>
+        <ul class="restaurant-list">
+          <li class="restaurant-item">
+            <span class="restaurant-name">Patna Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Lucknow  Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Ahmedabad  Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Ambala Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Patiala Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Chandigarh Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Hajipur Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Chennai Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Bengluru Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Hydrabad  Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Ranchi Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kochi Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Jaipur Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Amrabati Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kalinada Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Raipur Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Gurugram Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Bilaspur Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Srinagar Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kottayam Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Bhopal Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Aurangabad Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Malegoan Restaurents</span><br>
+            <a href="https://www.example.com/burger" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Guhawati Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Amrit```sir Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kangra Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Saharnpur Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>   
+          <li class="restaurant-item">
+            <span class="restaurant-name">Guhawati Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Amritsir Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kangra Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Saharnpur Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Guhawati Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Amritsir Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kangra Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Saharnpur Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Guhawati Restaurents</span><br>
+            <a href="https://www.example.com/taco" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Amritsir Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          <li class="restaurant-item">
+            <span class="restaurant-name">Kangra Restaurents</span><br>
+            <a href="https://www.example.com/pizza" class="restaurant-link">View Menu</a>
+          </li>
+          
+          
+   
+         
+      <footer>
+        <footer>
+          <div class="footer-info">
+            <h3>Ordering Info:</h3>
+            <span>Phone Number: 7488204975</Span>
+              <br>
+            <span>Delivery Hours: Mon-Sat 11am-9pm</span>
+          </div>
+          <div class="footer-follow">
+            
+            <h3>Follow Us:</h3>
+            <ul>
+                <li><a href="https://twitter.com/foodordersite"><img src="https://th.bing.com/th/id/OIP.QoqrOjCO2QJ2GkxbFJaovAHaHa?w=167&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Twitter"></a></li>
+                <li><a href="https://www.facebook.com/foodordersite/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/640px-Facebook_icon.svg.png" alt="Facebook"></a></li>
+                <li><a href="https://www.instagram.com/nitin_patel04s/"><img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM=w240-h480-rw" alt="Instagram"></a></li>
+            </ul>
+          </div>
+          <div class="footer-instructions">
+            <br>
+            <h3>Instructions:</h3>
+  
+            <span style="font-family:inherit">
+              "Our food is made fresh daily using only the highest quality, organic ingredients. We follow strict hygiene and safety protocols to ensure that our dishes are always healthy and safe to eat."
+            </span>
+            <br>
+          
+              <span>
+                By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. 
+                
+              </span style="font-family:inherit">
+              <br>
+              <span style="font-family:inherit">
+              
+                All trademarks are properties of their respective owners. 2008-2023 © NVR bistro™ Ltd. All rights reserved.
+              </span>
+              <br>
+              <br>
+            <span>All Rights Reserved Copyright</span>
+          </div>
+        
+        </footer>
+      
+        
+
+
+    
+      
+   
+    
+</body>
+</html>

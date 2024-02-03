@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+} */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  padding: 0 30px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ed1c24;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  padding-right: 40px;
+  border-right: 1px solid #d2d2d2;
+}
+
+.location i {
+  margin-right: 10px;
+  color: #222222;
+}
+
+.location span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  height: 30px;
+  padding: 0 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #f2f2f2;
+}
+
+.search-container button[type="submit"] {
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  cursor: pointer;
+}
+
+.search-container button[type="submit"]:hover {
+  background-color: #c9171e;
+}
+
+.fas {
+  font-size: 16px;
+}
+.hry{
+  
+  /* max-width: 85%; */
+  width: 800px;
+  height: 450px;
+  border: 3px solid #bc751e;
+  margin:1%;
+  margin-top:0%;
+  margin-left:0%;
+  margin-left:0%;
+  margin-bottom:0%;
+  padding-right:0%;
+
+
+  border-radius: 10px;
+}
+/* Style the menu section */
+.menu {
+  display: flex;
+   flex-wrap: wrap;
+   
+  /* justify-content: center; */
+}
+
+.item {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(69, 32, 32, 0.1);
+  text-align: center;  
+}
+
+.item img {
+  width: 90%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item h3 {
+  margin-top: 10px;
+  font-size: 24px;
+  background-color: #ebe4e4;
+  border-radius: 15px;
+  
+  width:100%;
+  height:15%;
+  text-align: center;
+}
+
+.item p {
+  margin-top: 5px;
+  font-size: 18px;
+  padding-left:10%;
+  margin-right: 10px;
+
+
+}
+.h1{
+/* text-shadow: 1px 1px 2px rgb(102, 90, 90), 0 0 25px rgb(127, 98, 43), 0 0 5px rgb(46, 46, 85); */
+font-family: Impact;
+font-size: 250%;
+  color:#ff8c00;
+
+}
+.yu{
+  border-radius: 2px red;
+
+  
+  
+}
+.u{
+  border-radius: 10px;
+  border: 3px solid #bc751e;
+
+ 
+  
+}
+p{
+  /* background-color: #f1eaea; */
+  background-color: #e4a30a;
+  font-family:Arial, Helvetica, sans-serif;
+  text-align:center
+   margin: 40px; 
+  /* margin-top: 22px; */
+  padding: 10px;
+
+  /* margin-bottom:0px;*/
+}
+.h1{
+  font-family: Impact;
+  color:#ff8c00;
+
+}
+/*image slides css syle*/
+.slideshow-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mySlides {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  margin: 0 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+
+</style>
+<header>
+    <div class="logo">
+      <a href="#">
+        <img src="https://www.freepngimg.com/thumb/mcdonalds/36153-3-mcdonalds-logo-transparent.png" alt="Burger King logo">
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Our Menu</a></li>
+        <li><a href="#">Deals</a></li>
+        <li><a href="#">King Finder</a></li>
+        <li><a href="#">BK Delivers</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="location-container">
+      <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>Find a Burger King near you</span>
+      </div>
+    </div>
+    <div class="search-container">
+      <form>
+        <input type="text" placeholder="Search">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+  </header>
+  
+<body>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.xSsDgzWWwr66d9dd5k4RmAHaEK&pid=Api&P=0">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.brquAry6FkJ81xi-4Ge1-QHaEo&pid=Api&P=0">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="image3.jpg">
+        </div>
+      
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <script>
+        var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+}
+
+      </script>
+      
+    <!-- <span>
+        <a href="http://127.0.0.1:5500/burgerlist.html"><img class="hry" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/4a610731056459.563f7852ef3a0.jpg" ></span></a>
+      <!-- <span><img class="item,yu" src="https://cdn0.iconfinder.com/data/icons/map-and-navigation-15/66/87-512.png" width="100" align="right"></span> 
+      <a href="http://127.0.0.1:5500/pizzalist.html"><img  class ='u' src="https://scontent.fdel1-5.fna.fbcdn.net/v/t39.30808-6/336745657_170521388752594_3430635874454997420_n.jpg?stp=dst-jpg_p843x403&_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=evaD3UE5-rUAX8anjPf&_nc_oc=AQluOLbC4ukfF2fGJEw_ziiNRCVY4g1oQ7w7KueZpJJZLn8LIc35bd06Ruw6o8LP1u8&_nc_ht=scontent.fdel1-5.fna&oh=00_AfDos-TMmxHWI-l1aYIp-aQkryrYLhOZjQvXNJ5JD863Cw&oe=6444792C" width="690" height="450"></a>
+    </span> -->
+    
+      <hr>
+      <form >
+        <span style="font-size:120%;font-family:Verdana;">BESTSELLERS</span>
+       
+      </form>
+      
+      
+      <main>
+        <section class="menu">
+          <!-- <h2>Menu</h2> -->
+          <div class="item">
+            <a href="http://127.0.0.1:5500/burgerlist.html"><img src="https://images3.alphacoders.com/942/942653.jpg" alt="Burger"></a>
+            <a href="http://127.0.0.1:5500/burgerlist.html"><h3 style="color: #000;">Burger</h3></a>
+            <!-- <h3>Burger</h3>  -->
+            
+            <p class="a">Paving The Way For Delicious Burgers.</p>
+            <!-- <p>$10.99</p> -->
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5500/pizzalist.html"><img src="https://b.zmtcdn.com/data/pictures/chains/9/2400349/edc92b9e7877ea851a3d6f1190d1580f_o2_featured_v2.jpg?output-format=webp" alt="Pizza"></a>
+            <a href="http://127.0.0.1:5500/pizzalist.html"><h3 style="color: #000;">Pizza</h3></a>
+        
+            <p>Our crust is always crispy and never burned.</p>
+            <!-- <p>$12.99</p> -->
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5500/Tacos.html"><img src="https://wallpapercave.com/wp/wp2010794.jpg" alt="Tacos"></a>
+            <a href="http://127.0.0.1:5500/Tacos.html"><h3 style="color: #000;">Tacos</h3></a>
+            <p>Authentic Mexican tacos with fresh ingredients.</p>
+            <!-- <p>$8.99</p> -->
+          </div>
+           <div class="item">
+          <a href="http://127.0.0.1:5500/Biryani.html"><img src="https://b.zmtcdn.com/data/pictures/chains/1/20343651/9d3d82a4f04a1b83e67a4642ecefe8fd_o2_featured_v2.jpg" alt="Chicken biryani"></a>
+          <a href="http://127.0.0.1:5500/Biryani.html"><h3 style="color: #000;">Biryani</h3> </a>
+          <p>Keep calm and add dum to your Biryani.</p>
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5500/Cake.html"><img src="https://i.pinimg.com/originals/2f/40/40/2f40406ee88a54fc7108f2f0a5d3cccc.jpg" alt="Cake"></a>
+            <a href="http://127.0.0.1:5500/Cake.html"><h3 style="color: #000;">Cake</h3></a>
+            <p>Every person is unique, why shouldn’t their cake be?.</p>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5500/chicken.html"><img src="https://images6.alphacoders.com/439/439410.jpg" alt="Chicken"></a>
+            <a href="http://127.0.0.1:5500/chicken.html"><h3 style="color: #000;">Chicken</h3></a>
+            <p>More space to bounce, perch, groom, and nest.</p>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <div class="item">
+            <a href="http://127.0.0.1:5500/Noodles.html"><img src="https://wallpapercave.com/wp/wp2393879.jpg" alt="Noodles"></a>
+            <a href="http://127.0.0.1:5500/Noodles.html"><h3 style="color: #000;">Noodles</h3></a>
+            <p>Take your stomach on a joy ride with yummy noodles..</p>
+            <!-- <p>$8.99</p> -->
+          </div>
+          <!-- <div class="item">
+            <img src="https://freepngimg.com/download/burger%20sandwich/12-hamburger-burger-png-image.png" alt="Burger">
+            <h3>Burger</h3>
+            <p>A juicy burger with all the fixings.</p> -->
+            <!-- <p>$10.99</p> -->
+          <div class="item">
+          <a href="http://127.0.0.1:5500/Paneer.html"><img src="https://wallpapercave.com/wp/wp4987425.jpg" alt="Paneer"></a>
+          <a href="http://127.0.0.1:5500/Paneer.html"><h3 style="color: #000;">Paneer</h3></a>
+          <p>A healthy bite every day, keep doctors at bay!.</p>
+          </div>
+     
+        </section>
+      
+   
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .detect-location-link {
+  display: inline-block;
+  text-align: center;
+}
+
+.detect-location-btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.fas.fa-map-marker-alt {
+  margin-right: 5px;
+}
+
+.location-img {
+  height: 20px;
+  margin-left: 5px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+}
+
+</style>
+<body>
+    <a href="http://127.0.0.1:5501/detectlocation.html" class="detect-location-link">
+        <button class="detect-location-btn">
+          <i class="fas fa-map-marker-alt"></i>
+          Detect my location
+          <img class="location-img" src="https://icon-library.com/images/current-location-icon/current-location-icon-17.jpg">
+        </button>
+      </a>
+      
+    
+</body>
+</html>

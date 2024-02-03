@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="path/to/jquery.js"></script>
+    <link rel="stylesheet" href="path/to/jquery-ui.css">
+
+  <!-- Include jQuery UI -->
+  <script src="path/to/jquery-ui.js"></script>
+</head>
+<style>
+       .payment-form {
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #ccc;
+        text-align: center;
+        margin-left:500px;
+        width:400px;
+    
+      }
+      
+      .payment-form h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .payment-form form {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .payment-form .form-group {
+        margin-bottom: 10px;
+        text-align: center;
+    
+      }
+      
+      .payment-form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+       
+
+      }
+      
+      .payment-form input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      
+      .payment-form button[type="submit"] {
+        background-color: blue;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+        text-decoration: none;
+        text-anchor: unset;
+      }
+      
+      .payment-form .accepted-cards {
+        margin-top: 20px;
+      }
+      
+      .payment-form .accepted-cards img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      
+      .payment-form .accepted-upi {
+        margin-top: 20px;
+      }
+      
+      .payment-form .accepted-upi img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .payment-form .pay-now-button {
+  display: inline-block;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.safely-payment {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.safely-payment img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.safely-payment p {
+  margin: 0;
+}
+.go-back {
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.go-back a {
+  color: blue;
+  padding:10px;
+  text-decoration: none;
+}
+
+.go-back a:hover {
+  text-decoration: underline;
+}
+
+      /*footer*/
+      footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap:wrap;
+padding: 20px;
+background-color: #1f243a;
+color:white;
+}
+
+.footer-info h3,
+.footer-follow h3,
+.footer-instructions h3 {
+margin-top: 0;
+}
+
+.footer-follow ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-follow li {
+display: inline-block;
+margin-right: 10px;
+}
+
+.footer-follow a {
+
+text-decoration: none;
+}
+
+.footer-follow a:hover {
+text-decoration: underline;
+color:deepskyblue;
+}
+.be{
+background-color: aquamarine;
+text-align: left;
+}
+.error {
+display: none;
+color: red;
+}
+
+</style>
+<body>
+    <div class="payment-form">
+       <h2 class="be">Total price:&#8377 930</h2>
+        <h2>Payment Details</h2>
+        <form>
+          <div class="form-group">
+            <label for="cardholder">Cardholder Name</label>
+            <input type="text" id="cardholder" name="cardholder" pattern="[A-Za-z\s]+" required>
+            <BR>
+            <span id="name-error" class="error">Only alphabetic characters are allowed.</span>
+          </div>
+            <!-- <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <span id="name-error" class="error">Only alphabetic characters are allowed.</span>
+          </div> -->
+          <div class="form-group">
+            <label for="cardnumber">Card Number</label>
+            <input type="text" id="cardnumber" name="cardnumber" pattern="\d+" required>
+          </div>
+          
+      
+          <div class="form-group">
+            <label for="expirydate">Expiry Date</label>
+            <div class="date-container">
+              <input type="text" id="expirydate" name="expirydate" required>
+              <!-- <img src="path/to/calendar-icon.png" alt="Calendar" class="calendar-icon"> -->
+            </div>
+          </div>
+          
+      
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required>
+          </div>
+      
+          <div class="form-group">
+            <a href="http://127.0.0.1:5502/confirmation.html" class="pay-now-button">Pay Now</a>
+          </div>
+        </form>
+      
+        <div class="accepted-cards">
+          <h3>Accepted Cards</h3>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Old_Visa_Logo.svg/2560px-Old_Visa_Logo.svg.png" alt="Visa">
+          <img src="https://1000logos.net/wp-content/uploads/2017/03/MasterCard-Logo-1990.png" alt="Mastercard">
+          <img src="https://tse3.mm.bing.net/th?id=OIP.C3222CedyFhyZRW3cTngvgHaEK&pid=Api&P=0" alt="American Express">
+          <img src="https://s.yimg.com/fz/api/res/1.2/GuFlJcmWtstAp.431uSt4g--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtoPTI2MDtxPTgwO3c9MjYw/https://s.yimg.com/zb/imgv1/cd8512b0-6138-37e4-985e-71ed19f0ec25/t_500x300" alt="Discover">
+        </div>
+        <div class="accepted-upi">
+            <h3>Accepted UPI Apps</h3>
+            <img src="https://1000logos.net/wp-content/uploads/2021/03/Paytm_Logo.jpg" alt="Paytm">
+            <img src="https://www.howtogeek.com/wp-content/uploads/2020/11/Google-Pay-hero.png?width=1198&trim=1" alt="Google Pay">
+            <A HREF=""><img src="https://download.logo.wine/logo/PhonePe/PhonePe-Logo.wine.png" alt="PhonePe"></A>
+          </div>
+        
+          <div class="go-back">
+              <button><a href="payment-gateway.html">&larr; Go back </a></button>
+            </div>
+        </div>
+        <script>
+          $(document).ready(function() {
+            $("#expirydate").datepicker({
+              dateFormat: "yy-mm-dd" // Set the desired date format
+            });
+          });
+        </script>
+        <SCRIPT>
+        const nameInput = document.getElementById('cardholder');
+        const nameError = document.getElementById('name-error');
+        
+        nameInput.addEventListener('input', function() {
+          const inputValue = nameInput.value;
+          const isValid = /^[a-zA-Z\s]+$/.test(inputValue);
+        
+          if (isValid) {
+            nameError.style.display = 'none';
+          } else {
+            nameError.style.display = 'block';
+          }
+          
+        });
+        </SCRIPT>
+          <footer>
+            <footer>
+              <div class="footer-info">
+                <h3>Ordering Info:</h3>
+                <span>Phone Number: 7488204975</Span>
+                  <br>
+                <span>Delivery Hours: Mon-Sat 11am-9pm</span>
+              </div>
+              <div class="footer-follow">
+                <h3>Follow Us:</h3>
+                <ul>
+                  <li><a href="https://www.instagram.com/nitin_patel04s/">Instagram</a></li>
+                  <li><a href="https://twitter.com/foodordersite">Twitter</a></li>
+                  <li><a href="https://www.facebook.com/foodordersite/">Facebook</a></li>
+                </ul>
+              </div>
+              <div class="footer-instructions">
+                <br>
+                <h3>Instructions:</h3>
+        
+                <span style="font-family:inherit">
+                  "Our food is made fresh daily using only the highest quality, organic ingredients. We follow strict hygiene and safety protocols to ensure that our dishes are always healthy and safe to eat."
+                </span>
+                <br>
+              
+                  <span>
+                    By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. 
+                    
+                  </span style="font-family:inherit">
+                  <br>
+                  <span style="font-family:inherit">
+                  
+                    All trademarks are properties of their respective owners. 2008-2023 © Zomato™ Ltd. All rights reserved.
+                  </span>
+                  <br>
+                  <br>
+                <span>All Rights Reserved Copyright</span>
+              </div>
+            
+            </footer>
+            
+          
+          
+        
+      
+    
